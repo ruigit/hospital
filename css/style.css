@@ -1,0 +1,407 @@
+@charset "utf-8";
+/*字体文件*/
+@font-face {
+    font-family: 'iconfont';  /* project id 563951 */
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-duihuazixun:before { content: "\e700"; }
+
+.icon-tubiao314:before { content: "\e625"; }
+
+.icon-gerenxinxi:before { content: "\e65d"; }
+
+.icon-sousuo:before { content: "\e62a"; }
+
+.icon-weibiaoti7:before { content: "\e619"; }
+
+.icon-weibiaoti33:before { content: "\e633"; }
+
+.icon-icon_good:before { content: "\e616"; }
+
+.icon-xiaolianwawa:before { content: "\e607"; }
+
+.icon-shouye1-copy:before { content: "\e64e"; }
+
+.icon-xinxi:before { content: "\e64b"; }
+
+.icon-phone:before { content: "\e6dc"; }
+
+.icon-tianjiazhaopian:before { content: "\e622"; }
+
+.icon-sanjiao:before { content: "\e65a"; }
+
+.icon-cha:before { content: "\e605"; }
+
+.icon-shipin:before { content: "\e80a"; }
+
+.icon-jiahao:before { content: "\e604"; }
+
+.icon-geren:before { content: "\e641"; }
+
+.icon-plus-add:before { content: "\e727"; }
+
+.icon-collection:before { content: "\e611"; }
+
+.icon-tianjiaguanzhu:before { content: "\e7b9"; }
+
+.icon-BAI-lingdang:before { content: "\e6ce"; }
+
+.icon-shezhi:before { content: "\e78a"; }
+
+.icon-icon--:before { content: "\e728"; }
+
+.icon-zuo:before { content: "\e600"; }
+
+.icon-chakan:before { content: "\e6c6"; }
+
+html,
+body {
+    background: #fff;
+    /*font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;*/
+    /* 第一个是第三方字体 */
+    font-family: Helvetica,sans-self;
+    font-style: normal;
+    -webkit-user-select: none;
+    /* 禁止页面文字选择 */
+}
+.register-nav{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.regist-zuo{
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem;
+}
+.register-content{
+
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.register-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    margin-left: 34%;
+    line-height: 1rem;
+}
+.register-line{
+    width: 100%;
+    height: auto;
+    background: #fff;
+
+    margin-top: 0.2rem;
+}
+.register-con{
+    width: 90%;
+    margin: 0 5%;
+}
+.register-con p{
+    border-bottom: 1px solid #e7e7e7;
+
+    padding-bottom: 0.05rem;
+    margin-top: 0.2rem;
+    height: 1rem;
+}
+.register-input{
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    text-indent: 0.2rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 80%;
+    font-size: 0.32rem;
+    color: #b5b3b4;
+    margin-top: 0.2rem;
+    float: left;
+
+}
+.register-con p:last-child{
+    border-bottom:none;
+}
+.register-input-yanzheng{
+    width: 50%!important;
+}
+.register-icon{
+    font-size: 0.45rem;
+    color: #c8c7cc;
+    float: right;
+    line-height: 1rem;
+    margin-right: 0.22rem;
+}
+.register-btn-info{
+    width: 80%;
+    background: #df4198;
+    line-height: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.36rem;
+    text-align: center;
+    color: #fff;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    margin: 1rem 10% 0 10%;
+    border: none;
+}
+.get-code{
+    display: block;
+    width: 30%;
+    float: right;
+    background: #e6e6e6;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    text-align: center;
+    color: #6a6a6a;
+    -moz-border-radius: 0.15rem;
+    -webkit-border-radius: 0.15rem;
+    border-radius: 0.15rem;
+    margin-top: 0.1rem;
+    margin-right: 0.2rem;
+}
+.register-login{
+    width: 80%;
+    margin: 0.4rem 10%;
+}
+.register-login ul li{
+    float: right;
+    color: #dd4198;
+    height: 0.6rem;
+}
+.register-have{
+    width: auto;
+    font-size: 0.35rem;
+    line-height: 0.6rem;
+    margin-top: 0.05rem;
+    margin-right: 0.2rem;
+}
+.register-login-buten{
+    width: auto;
+    font-size: 0.3rem;
+    padding: 0 0.3rem;
+    line-height: 0.6rem;
+    border: 2px #dd4198 solid;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+}
+/*registerend*/
+
+.index-content{
+
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.index-sousuo{
+    font-size: 0.4rem;
+    color: #dd4198;
+    float: right;
+    line-height: 1.3rem;
+    margin-right: 0.3rem;
+}
+.index-nav{
+    width: 100%;
+    height: 1.3rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.index-logo{
+    width: 20%;
+    height: 1.3rem;
+    float: left;
+}
+.index-logo img{
+    width: 0.7rem;
+    height: 0.7rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px #dfdfdf solid;
+    margin: 0.3rem auto auto 0.2rem;
+}
+.index-nav-list {
+    font-size: 0.35rem;
+    float: left;
+    width: 68%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    color: #494949;
+}
+.index-nav-list ul li{
+    width: 25%;
+    line-height: 1.3rem;
+    float: left;
+
+}
+.current{
+    color: #dd4198;
+}
+.index-tag{
+    width: 96%;
+    height: auto;
+    margin: 0 2%;
+}
+.index-tag ul li{
+    float: left;
+    width: 49%;
+    height: 1.8rem;
+}
+.index-tag ul li:last-of-type{
+    margin-left: 2%;
+}
+.index-tag ul li img{
+    width: 100%;
+    height: 1.8rem;
+    -moz-border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+}
+.index-content-list{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.index-content-list dl dt{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px #eee solid;
+}
+.index-content-list dl dt ul li{
+    float: left;
+    width: 70%;
+    margin: 0.2rem auto;
+}
+.index-content-list dl dt ul li:last-of-type{
+    width: 30%;
+}
+.index-content-list dl dt ul li p{
+    width: 100%;
+    text-indent: 0.4rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.32rem;
+    color: #333;
+    overflow: hidden;
+    margin: 0.3rem 0;
+}
+.index-content-list dl dt ul li span label{
+    background: #feebcb;
+    color: #fe9901;
+    padding: 0.06rem 0.15rem;
+    -moz-border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+}
+.index-content-list dl dt ul li span{
+    width: 100%;
+    display: block;
+    text-indent: 0.4rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.28rem;
+    color: #cbcbcb;
+    overflow: hidden;
+    margin: 0.3rem 0;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.index-content-list dl dt ul li img{
+    width: 80%;
+    height: 1.6rem;
+    margin-left: 10%;
+    margin-top: 0.2rem;
+}
+.footer{
+    width: 100%;
+    height: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5555;
+    background: #fff;
+    border-top: 1px #eee solid;
+}
+.footer ul li{
+    float: left;
+    width: 20%;
+    height: 1.2rem;
+    margin-left: 10%;
+    padding-top: 0.1rem;
+}
+.footer ul li p{
+    width: 100%;
+    text-align: center;
+    color: #333;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    font-size: 0.26rem;
+}
+.shouye{
+    color: #8c8c8c;
+    margin-left: 26.3%;
+    font-size: 0.7rem;
+    background: linear-gradient(to bottom, #ffffff, #8c8c8c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.jiandang{
+    color: #8c8c8c;
+    margin-left: 26.3%;
+    font-size: 0.7rem;
+    background: linear-gradient(to bottom, #ffffff, #8c8c8c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.geren{
+    color: #8c8c8c;
+    margin-left: 26.3%;
+    font-size: 0.7rem;
+    background: linear-gradient(to bottom, #ffffff, #8c8c8c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.curr{
+    background: linear-gradient(to bottom, #ffffff, #dd4198);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.currfont{
+    color: #dd4198!important;
+}
+/*index end*/
+
+/*loginend*/
+/*pad-pro横屏*/
+@media only screen and (min-width: 1366px) {
+
+}
+
+/*pad横屏*/
+@media only screen and (min-width: 1024px) {
+
+}
+
+/*pad竖屏*/
+@media only screen and (min-width: 768px) {
+
+}

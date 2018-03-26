@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--轮播图-->
+    <link rel="stylesheet" href="css/slider.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!--轮播图-->
+    <script type="text/javascript" src="js/h5-slider.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".index-content").height();
+            if(winHeight > bodyHeight){
+                $(".index-content").css({height: winHeight});
+            }
+        })
+    </script>
+</head>
+<body>
+<div class="index-content">
+    <div class="index-nav">
+        <div class="index-logo">
+            <img src="img/picd.jpg" />
+        </div>
+        <div class="index-nav-list">
+            <ul>
+                <li class="current">咨讯</li>
+                <li>论坛</li>
+                <li>专家</li>
+                <li>排行榜</li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <i class="iconfont icon-sousuo index-sousuo"></i>
+        <div class="clearfix"></div>
+    </div>
+    <!-- 轮播图开始 -->
+    <div class="aui-banner-content " data-aui-slider>
+        <div class="aui-banner-wrapper">
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner3.jpg">
+                </a>
+            </div>
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner1.jpg">
+                </a>
+            </div>
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner4.jpg">
+                </a>
+            </div>
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner2.jpg">
+                </a>
+            </div>
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner1.jpg">
+                </a>
+            </div>
+            <div class="aui-banner-wrapper-item">
+                <a href="#">
+                    <img data-src="img/news-banner4.jpg">
+                </a>
+            </div>
+        </div>
+        <!--角标-->
+        <div class="aui-banner-pagination"></div>
+    </div>
+    <!-- 轮播图结束 -->
+<div class="index-tag">
+    <ul>
+        <li><img src="img/rfszcl.jpg" /></li>
+        <li><img src="img/dcxpg.jpg" /></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+<div class="index-content-list">
+    <dl>
+        <dt>
+            <ul>
+                <li>
+                    <p>健康生活必须养成好习惯，你知道吗？</p>
+                    <span>
+                        <label>养生</label>
+                        如今，癌症离我们越来越近，且癌症患者离我们越来越近
+                    </span>
+                </li>
+                <li><img src="img/picd.jpg" /></li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+        <dt>
+            <ul>
+                <li>
+                    <p>健康生活必须养成好习惯，你知道吗？</p>
+                    <span>
+                        <label>养生</label>
+                        如今，癌症离我们越来越近，且癌症患者离我们越来越近
+                    </span>
+                </li>
+                <li><img src="img/picd.jpg" /></li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+        <dt>
+            <ul>
+                <li>
+                    <p>健康生活必须养成好习惯，你知道吗？</p>
+                    <span>
+                        <label>养生</label>
+                        如今，癌症离我们越来越近，且癌症患者离我们越来越近
+                    </span>
+                </li>
+                <li><img src="img/picd.jpg" /></li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+        <dt>
+            <ul>
+                <li>
+                    <p>健康生活必须养成好习惯，你知道吗？</p>
+                    <span>
+                        <label>养生</label>
+                        如今，癌症离我们越来越近，且癌症患者离我们越来越近
+                    </span>
+                </li>
+                <li><img src="img/picd.jpg" /></li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>
