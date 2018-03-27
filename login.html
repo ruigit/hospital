@@ -27,21 +27,54 @@
         $(document).ready(function() {
             //		背景高度
             var winHeight = window.innerHeight;
-            $(".register-content").css({height: winHeight});
+            var bodyHeight = $(".login-content").height();
+            if(winHeight > bodyHeight){
+                $(".login-content").css({height: winHeight});
+            }
             // 显示隐藏密码
-            $(".register-icon").on("click",function () {
-                if($("#upass").hasClass('pas')) {
-                    $("#upass").prop("type", "text");
-                    $("#upass").removeClass("pas");
+            $(".login-icon").on("click",function () {
+                if($("#lpass").hasClass('pas')) {
+                    $("#lpass").prop("type", "text");
+                    $("#lpass").removeClass("pas");
                 }else {
-                    $("#upass").prop("type", "password");
-                    $("#upass").addClass("pas");
+                    $("#lpass").prop("type", "password");
+                    $("#lpass").addClass("pas");
                 }
             })
         })
     </script>
 </head>
 <body>
+<div class="login-content">
+    <div class="login-logo"><img src="img/index-logo.png" /></div>
+    <div class="login-form">
+        <p>
+            <input class="login-input" id="lphone" type="text" name="phone" value="请输入手机号" onfocus="if(this.value=='请输入手机号'){this.value=''}" onblur="if(this.value==''){this.value='请输入手机号'}">
+        </p>
 
+        <p>
+            <input class="login-input" id="lpass" type="text" name="psw" value="请输入登陆密码" onfocus="if(this.value=='请输入登陆密码'){this.value=''}" onblur="if(this.value==''){this.value='请输入登陆密码'}">
+            <i class="iconfont icon-chakan login-icon"></i>
+        </p>
+        <span>忘记密码？</span>
+        <div class="clearfix"></div>
+    </div>
+    <div class="login-button">login</div>
+    <div class="login-border">
+        <div class="login-border-left"></div>
+        <div class="login-p">或</div>
+        <div class="login-border-left"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="login-short">手机快捷登陆</div>
+    <div class="login-short-list">
+        <ul>
+            <li>微信账号登陆</li>
+            <li>|</li>
+            <li>免费注册</li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
