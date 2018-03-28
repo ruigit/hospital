@@ -20,6 +20,7 @@
     <script type="text/javascript" src="js/rem.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/mobileSelect.min.js"></script>
+    <script type="text/javascript" src="js/mobileSelect1.min.js"></script>
     <script>
         //阻止穿透事件
         $(function(){
@@ -243,7 +244,7 @@
                 }
             })
             // 术前诊断
-            var mobileSelect3 = new MobileSelect({
+            var mobileSelect3 = new MobileSelect1({
                 trigger: '#ops',
                 title: '术前诊断',
                 floor:'<ul class="cup-ul"><li></li><li></li></ul>',
@@ -296,14 +297,64 @@
                             },
 
                         ]}
+
                 ],
+                wheels1:[
+                    {data:[
+                            {
+                                id:'2',
+                                value:'第二个',
+                                childs:[
+                                    {id:'1',value:'第二个'},
+                                    {id:'2',value:'第二个'},
+                                    {id:'3',value:'第二个'},
+                                    {id:'4',value:'第二个'},
+                                    {id:'5',value:'第二个'}
+                                ]
+                            },
+                            {
+                                id:'3',
+                                value:'第二个',
+                                childs:[
+                                    {id:'1',value:'第二个'},
+                                    {id:'2',value:'第二个'},
+                                    {id:'3',value:'第二个'},
+                                    {id:'4',value:'第二个'},
+                                    {id:'5',value:'第二个'}
+                                ]
+                            },
+                            {
+                                id:'4',
+                                value:'第二个',
+                                childs:[
+                                    {id:'1',value:'第二个'},
+                                    {id:'2',value:'第二个'},
+                                    {id:'3',value:'第二个'},
+                                    {id:'4',value:'第二个'},
+                                    {id:'5',value:'第二个'}
+                                ]
+                            },
+                            {
+                                id:'5',
+                                value:'第二个',
+                                childs:[
+                                    {id:'1',value:'第二个'},
+                                    {id:'2',value:'第二个'},
+                                    {id:'3',value:'第二个'},
+                                    {id:'4',value:'第二个'},
+                                    {id:'5',value:'第二个'}
+                                ]
+                            },
+
+                        ]}
+                    ],
                 position:[1], //初始化定位
 
                 callback:function(indexArr, data){
 
                     for (var i=0;i<data.length;i++) {
 
-                        $("#cup").empty().append(data[i].value + ' ' + data[++i].value);
+                        $("#ops").empty().append(data[i].value + ' ' + data[++i].value);
 
                     }
                 }

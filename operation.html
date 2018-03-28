@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".operation-content").height();
+            if(winHeight > bodyHeight){
+                $(".operation-content").css({height: winHeight});
+            }
+
+        })
+    </script>
+</head>
+<body>
+<div class="operation-content">
+    <div class="operation-nav">
+        <i class="iconfont icon-zuo operation-zuo"></i>
+        <div class="operation-nav-list">运算结果</div>
+    </div>
+    <div class="operation-updata">
+        <div class="operation-up">
+            <img src="img/zdjg.jpg" />
+        </div>
+    </div>
+    <div class="operation-list">
+        <dl>
+            <dt>
+                <ul>
+                    <li>乳房数量测量</li>
+                    <li>左乳(cm)</li>
+                    <li>右乳(cm)</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>S-N.胸骨上凹切迹到乳头间距离：</li>
+                    <li class="operation-list-color">35</li>
+                    <li class="operation-list-color">36</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>N-F.乳头到乳房下皱襞间距离：</li>
+                    <li class="operation-list-color">35</li>
+                    <li class="operation-list-color">36</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>BW.乳房基底宽度：</li>
+                    <li class="operation-list-color">35</li>
+                    <li class="operation-list-color">36</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>BH.乳房高度：</li>
+                    <li class="operation-list-color">35</li>
+                    <li class="operation-list-color">36</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>ID.乳房间距：</li>
+                    <li class="operation-list-color liwidth">35</li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+        </dl>
+    </div>
+    <div class="column" id="column">
+        <p>拟行手术</p>
+        <i class="iconfont icon-sanjiao column-sanjiao"></i>
+        <div class="clearfix"></div>
+    </div>
+    <div class="operation-button">相同案例</div>
+</div>
+</body>
+</html>

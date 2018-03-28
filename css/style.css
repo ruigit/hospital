@@ -631,7 +631,499 @@ body {
     /**filter: Glow(color=#df3c95, strength=2);*/
 }
 /*record建档end*/
+.diagnose-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+    padding-bottom: 1rem;
+}
+.diagnose-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.diagnose-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    margin-left: 44%;
+    line-height: 1rem;
+}
+.diagnose-cha{
+    color: #6f6f6f;
+    font-size: 0.45rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.25rem;
+}
+.diagnose-updata{
+    width: 100%;
+    height: auto;
+    padding: 0.2rem 0;
+    background: #fff;
+    margin: 0.2rem auto;
+}
+.diagnose-up{
+    width: 96%;
+    height: 5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 2px #5a5a5a dashed;
+}
+.diagnose-up img{
+    width: 2.9rem;
+    height: 3rem;
+    margin: 1rem 30%;
+}
+.diagnose-content-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+}
+.diagnose-content-list dl dt{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px #d8d8d8 solid;
+}
+.diagnose-content-list dl dt:last-of-type{
+    border: none;
+}
+.diagnose-content-list dl dt ul li{
+    float: left;
+    width: 40%;
+    height: auto;
+}
+.diagnose-content-list dl dt ul li:last-of-type{
+    margin-left: 20%;
+}
+.diagnose-content-list dl dt ul li label{
+    width: 54%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #dd4198;
+    text-align: left;
+    float: left;
+    text-indent: 0.1rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.diagnose-content-list dl dt ul li span{
+    width: 41%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #486573;
+    text-align: right;
+    float: left;
+    display: block;
+    padding-right: 5%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.diagnose-content-list dl dt label{
+    width: 30%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #dd4198;
+    text-align: left;
+    float: left;
+    text-indent: 0.1rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.diagnose-content-list dl dt span{
+    width: 68%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #486573;
+    text-align: right;
+    float: left;
+    display: block;
+    padding-right: 2%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.diagnose-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.6rem auto 0rem auto;
+    background: url(../img/buttonback.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: #facce6;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+/*diagnose 诊断 end*/
+.operation-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+    padding-bottom: 1rem;
+}
+.operation-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.operation-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    margin-left: 40%;
+    line-height: 1rem;
+}
+.operation-zuo{
+    color: #6f6f6f;
+    font-size: 0.55rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem;
+}
+.operation-updata{
+    width: 100%;
+    height: auto;
+    padding: 0.2rem 0;
+    background: #fff;
+    margin: 0.2rem auto;
+}
+.operation-up{
+    width: 96%;
+    height: 5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.operation-up img{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.operation-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+}
+.operation-list dl dt{
+    width: 96%;
+    margin-left: 4%;
+    border-bottom: 1px #d8d8d8 solid;
+}
+.operation-list dl dt:last-of-type{
+    border: none;
+}
+.operation-list dl dt ul li{
+    float: left;
+    height: 1rem;
+    box-sizing: border-box;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size: 0.3rem;
+    color: #dd4198;
+}
+.operation-list dl dt ul li:nth-child(1){
+    width: 63%;
+    text-align: left;
+}
+.operation-list dl dt ul li:nth-child(2){
+    width: 18.5%;
+    text-align: center;
+}
+.operation-list dl dt ul li:nth-child(3){
+    width: 18.5%;
+    text-align: center;
+}
+.operation-list-color{
+    color: #010101!important;
+}
+.liwidth{
+    width: 33% !important;
+}
+.column{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    margin: 0.2rem auto;
+}
+.column p{
+    width: 50%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #dd4198;
+    text-indent: 4%;
+    float: left;
+}
+.column-sanjiao{
+    color: #dd4198;
+    font-size: 0.55rem;
+    float: right;
+    line-height: 1rem;
+    margin-right: 0.2rem;
+}
+.operation-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.6rem auto 0rem auto;
+    background: url(../img/buttonback.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #facce6;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+/*operation 运算结果end*/
+.operation-cha{
+    color: #6f6f6f;
+    font-size: 0.4rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.25rem;
+}
+/*postoperative 术后评估end*/
+.post-result-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.post-result-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    margin-left: 35%;
+    line-height: 1rem;
+}
+.post-result-zuo{
+    color: #6f6f6f;
+    font-size: 0.55rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.22rem;
+}
+.post-result-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+}
+.post-result-list dl dt{
+    width: 96%;
+    margin-left: 4%;
+    border-bottom: 1px #d8d8d8 solid;
+}
+.post-result-list dl dt:last-of-type{
+    border: none;
+}
+.post-result-list dl dt ul li{
+    float: left;
+    height: 1rem;
+    box-sizing: border-box;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size: 0.3rem;
 
+}
+.post-result-list dl dt ul li:nth-child(1){
+    width: 63%;
+    text-align: left;
+    color: #dd4198;
+}
+.post-result-list dl dt ul li:nth-child(2){
+    width: 37%;
+    text-align: center;
+    color: #010101;
+}
+.post-result-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.6rem auto 0rem auto;
+    background: url(../img/buttonback.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    font-size: 0.42rem;
+    font-weight: bold;
+    color: #facce6;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+/*post-result术后评估结果end*/
+.symmetry-content {
+    width: 100%;
+    height: auto;
+    background: #3b3d4c;
+    position: relative;
+}
+.symmetry-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.symmetry-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    margin-left: 37%;
+    line-height: 1rem;
+}
+.symmetry-zuo{
+    color: #6f6f6f;
+    font-size: 0.55rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.22rem;
+}
+.symmetry-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+}
+.symmetry-updata {
+    width: 100%;
+    height: auto;
+    padding: 0.2rem 0;
+    background: #3b3d4c;
+    margin: 0.2rem auto;
+}
+.symmetry-up {
+    width: 96%;
+    height: 5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 2px #fff dashed;
+}
+.symmetry-up img {
+    width: 2.9rem;
+    height: 3rem;
+    margin: 1rem 30%;
+}
+.symmetry-button {
+    position: absolute;
+    bottom: 1rem;
+    left: 35%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.6rem auto 0rem auto;
+    background: url(../img/loginin.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #facce6;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+/*symmetry 对称性评估end*/
+.symmetry-result-content {
+    width: 100%;
+    height: auto;
+    background: #3b3d4c;
+}
+.symmetry-result-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.symmetry-result-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    margin-left: 33%;
+    line-height: 1rem;
+}
+.symmetry-result-zuo{
+    color: #6f6f6f;
+    font-size: 0.55rem;
+    float: left;
+    margin-left: 0.2rem;
+    margin-top: 0.22rem;
+}
+.symmetry-result-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+}
+.symmetry-result-updata{
+    width: 100%;
+    height: 7.2rem;
+}
+.symmetry-result-updata-rusu{
+    width: 100%;
+    height: 1.5rem;
+}
+.symmetry-result-updata-rusu p{
+    width: 70%;
+    float: left;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.45rem;
+    color: #facce6;
+    text-align: right;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+.symmetry-result-updata-rusu span{
+    width: 30%;
+    float: left;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.4rem;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.symmetry-result-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.3rem auto 0.6rem auto;
+    background: url(../img/buttonback.png) no-repeat center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #facce6;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
+    -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+    -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
+}
+/*symmetry-result 对称性评估结果end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

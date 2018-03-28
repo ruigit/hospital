@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".diagnose-content").height();
+            if(winHeight > bodyHeight){
+                $(".diagnose-content").css({height: winHeight});
+            }
+
+        })
+    </script>
+</head>
+<body>
+<div class="diagnose-content">
+    <div class="diagnose-nav">
+        <i class="iconfont icon-cha diagnose-cha"></i>
+        <div class="diagnose-nav-list">诊断</div>
+    </div>
+    <div class="diagnose-updata">
+        <div class="diagnose-up">
+            <img src="img/updata.png" />
+        </div>
+    </div>
+    <div class="diagnose-content-list">
+        <dl>
+            <dt>
+                <ul>
+                    <li>
+                        <label>住院号：</label>
+                        <span>24号</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <label>年龄：</label>
+                        <span>24号</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <ul>
+                    <li>
+                        <label>身高：</label>
+                        <span>167cm</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <label>体重：</label>
+                        <span>62kg</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+            </dt>
+            <dt>
+                <label>胸部大小：</label>
+                <span>左-30C 右-30</span>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <label>病情：</label>
+                <span>左-乳房肿瘤 右-乳房肿瘤</span>
+                <div class="clearfix"></div>
+            </dt>
+        </dl>
+    </div>
+    <div class="diagnose-button">运算</div>
+</div>
+</body>
+</html>
