@@ -99,13 +99,13 @@
 .mobileSelect .content .panel .wheels {
   width: 96%;
     margin-left: 2%;
-  height: 4rem;
+  height: 8rem;
   overflow: hidden;
 }
 .mobileSelect .content .panel .wheel {
   position: relative;
   z-index: 0;
-  float: left;
+  float: right;
   width: 50%;
   height: 4rem;
   overflow: hidden;
@@ -148,6 +148,24 @@
   /*border-top: 2px solid #dd4198;*/
   /*border-bottom: 2px solid #dd4198;*/
 }
+.selectLineper {
+  height: 0.8rem;
+  /*width: 30%;*/
+  /*left: 35%;*/
+  line-height: 0.8rem;
+  font-size: 0.35rem;
+  text-align: center;
+  color: #000;
+  width: 96%;
+  left: 2%;
+  position: absolute;
+  top: 5.6rem;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*border-top: 2px solid #dd4198;*/
+  /*border-bottom: 2px solid #dd4198;*/
+}
 .selectii{
   height: 0.8rem;
   /*width: 30%;*/
@@ -168,8 +186,18 @@
   position: absolute;
   top: 0;
   width: 100%;
-  /*height: 0rem;*/
-  height: 4rem;/*上下虚显示*/
+  height: 4rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.shadowMaskper{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
   background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
   background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
@@ -182,41 +210,26 @@
   visibility: visible;
 }
 .mobileSelect-show .content {
-  bottom: 25%;
+  bottom: 12%;
 }
-.cup-ul li{
-  float: left;
-  width: 48%;
-  line-height: 0.79rem;
-  height: 0.79rem;
-  margin-left: 2%;
-  text-align: right;
-  border-top: 2px solid #dd4198;
-  border-bottom: 2px solid #dd4198;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.hospital-ul li{
-    float: left;
-    width: 19%;
+
+.column-ul li{
+    float: right;
+    width: 80%;
     line-height: 0.79rem;
-    height: 0.8rem;
-    margin-right: 1%;
+    height: 0.79rem;
     text-align: right;
     border-top: 2px solid #dd4198;
     border-bottom: 2px solid #dd4198;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-.hospital-ul li:last-of-type{
+.column-ul p{
+    width: 20%;
     float: left;
-    width: 60%;
-    line-height: 0.79rem;
+    line-height: 0.8rem;
     height: 0.8rem;
-    margin-right: 0;
-    text-align: right;
-    border-top: 2px solid #dd4198;
-    border-bottom: 2px solid #dd4198;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    font-size: 0.35rem;
+    text-align: center;
+    color: #000;
 }

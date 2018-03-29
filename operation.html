@@ -15,9 +15,11 @@
     <title>hospital</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobileSelectoper.css">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/rem.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/mobileSelectoper.min.js"></script>
     <script>
         //阻止穿透事件
         $(function(){
@@ -31,7 +33,39 @@
             if(winHeight > bodyHeight){
                 $(".operation-content").css({height: winHeight});
             }
+            // 拟行手术
+            var mobileSelect = new MobileSelect({
+                trigger: '#column',
+                title: '拟行手术',
+                floor:'<ul class="column-ul"><p>左乳</p><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]},
+                    {data:[
+                            {id:'1',value:'动脉导管未闭结扎术'},
+                            {id:'2',value:'肺肿瘤局部切除术胃十二指肠吻合术'},
+                            {id:'3',value:'房间隔缺损修补术'},
+                            {id:'4',value:'喉切除术和喉造口术'},
+                            {id:'5',value:'巴氏腺囊肿切除术'}
+                        ]}
+                ],
+                position:[3,1], //初始化定位
 
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#column").empty().addClass("column-lis").append('左乳' + ' - ' + data[i].value + '---' + '右乳' + ' - ' + data[++i].value);
+
+                    }
+                }
+            })
         })
     </script>
 </head>

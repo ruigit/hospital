@@ -20,7 +20,8 @@
     <script type="text/javascript" src="js/rem.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/mobileSelect.min.js"></script>
-    <script type="text/javascript" src="js/mobileSelect1.min.js"></script>
+    <link rel="stylesheet" href="css/mobileSelectrec.css">
+    <script type="text/javascript" src="js/mobileSelectrec.min.js"></script>
     <script>
         //阻止穿透事件
         $(function(){
@@ -247,114 +248,450 @@
             var mobileSelect3 = new MobileSelect1({
                 trigger: '#ops',
                 title: '术前诊断',
-                floor:'<ul class="cup-ul"><li></li><li></li></ul>',
+                floor:'<ul class="rec-ul"><p>左乳</p><li></li><li></li></ul>',
                 triggerDisplayData: false,
                 wheels:[
                     {data:[
                             {
                                 id:'2',
-                                value:'30',
+                                value:'正常',
                                 childs:[
-                                    {id:'1',value:'A'},
-                                    {id:'2',value:'B'},
-                                    {id:'3',value:'C'},
-                                    {id:'4',value:'D'},
-                                    {id:'5',value:'E'}
+                                    {id:'1',value:'正常',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]}
                                 ]
                             },
                             {
                                 id:'3',
-                                value:'31',
+                                value:'良性',
                                 childs:[
-                                    {id:'1',value:'A'},
-                                    {id:'2',value:'B'},
-                                    {id:'3',value:'C'},
-                                    {id:'4',value:'D'},
-                                    {id:'5',value:'E'}
+                                    {id:'1',value:'肿瘤肿瘤肿瘤',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'2',value:'良性B',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'3',value:'良性C',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'4',value:'良性D',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'5',value:'良性E',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]}
                                 ]
                             },
                             {
                                 id:'4',
-                                value:'32',
+                                value:'恶性',
                                 childs:[
-                                    {id:'1',value:'A'},
-                                    {id:'2',value:'B'},
-                                    {id:'3',value:'C'},
-                                    {id:'4',value:'D'},
-                                    {id:'5',value:'E'}
+                                    {id:'1',value:'肿瘤',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'2',value:'恶性B',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'3',value:'恶性C',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'4',value:'恶性D',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'5',value:'恶性E',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]}
                                 ]
                             },
                             {
                                 id:'5',
-                                value:'33',
+                                value:'其他',
                                 childs:[
-                                    {id:'1',value:'A'},
-                                    {id:'2',value:'B'},
-                                    {id:'3',value:'C'},
-                                    {id:'4',value:'D'},
-                                    {id:'5',value:'E'}
+                                    {id:'1',value:'其他A',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'2',value:'其他B',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'3',value:'其他C',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'4',value:'其他D',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]},
+                                    {id:'5',value:'其他E',childs:[
+                                            {id:'1',value:'正常',childs:[
+                                                    {id:'1',value:'正常'}]},
+                                            {id:'2',value:'良性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'3',value:'恶性',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]},
+                                            {id:'4',value:'其他',childs:[
+                                                    {id:'1',value:'肿瘤肿瘤肿瘤'},
+                                                    {id:'2',value:'良性B'},
+                                                    {id:'3',value:'良性C'},
+                                                    {id:'4',value:'良性D'},
+                                                    {id:'5',value:'良性E'}
+                                                ]}
+                                        ]}
                                 ]
-                            },
+                            }
 
                         ]}
 
                 ],
-                wheels1:[
-                    {data:[
-                            {
-                                id:'2',
-                                value:'第二个',
-                                childs:[
-                                    {id:'1',value:'第二个'},
-                                    {id:'2',value:'第二个'},
-                                    {id:'3',value:'第二个'},
-                                    {id:'4',value:'第二个'},
-                                    {id:'5',value:'第二个'}
-                                ]
-                            },
-                            {
-                                id:'3',
-                                value:'第二个',
-                                childs:[
-                                    {id:'1',value:'第二个'},
-                                    {id:'2',value:'第二个'},
-                                    {id:'3',value:'第二个'},
-                                    {id:'4',value:'第二个'},
-                                    {id:'5',value:'第二个'}
-                                ]
-                            },
-                            {
-                                id:'4',
-                                value:'第二个',
-                                childs:[
-                                    {id:'1',value:'第二个'},
-                                    {id:'2',value:'第二个'},
-                                    {id:'3',value:'第二个'},
-                                    {id:'4',value:'第二个'},
-                                    {id:'5',value:'第二个'}
-                                ]
-                            },
-                            {
-                                id:'5',
-                                value:'第二个',
-                                childs:[
-                                    {id:'1',value:'第二个'},
-                                    {id:'2',value:'第二个'},
-                                    {id:'3',value:'第二个'},
-                                    {id:'4',value:'第二个'},
-                                    {id:'5',value:'第二个'}
-                                ]
-                            },
 
-                        ]}
-                    ],
-                position:[1], //初始化定位
+
+
+                position:[0,0,0,0], //初始化定位
+
 
                 callback:function(indexArr, data){
 
+
                     for (var i=0;i<data.length;i++) {
 
-                        $("#ops").empty().append(data[i].value + ' ' + data[++i].value);
+                        $("#ops").empty().append('左乳' + '-'  + data[i].value + data[++i].value + '右乳' + '-'  + data[++i].value + data[++i].value);
 
                     }
                 }
