@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobileSelect.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/mobileSelectprofile.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".profile-content").height();
+            if(winHeight > bodyHeight){
+                $(".profile-content").css({height: winHeight});
+            }
+            // 更换头像
+            $('.profile-record-zhi').on("click",function(){
+                var $this = $(this),
+                    btn = $this.find('.profile-cover'),
+                    img = $this.find('img');
+                btn.on('change',function(){
+                    var file = $(this)[0].files[0],
+                        imgSrc = $(this)[0].value,
+                        url = URL.createObjectURL(file);
+                    if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+                        alert("请上传jpg或png格式的图片！");
+                        return false;
+                    }else{
+                        img.attr('src',url);
+                    }
+                });
+            })
+            // 咨询时间
+            var mobileSelect = new MobileSelect({
+                trigger: '#profile-time',
+                title: '选择时间',
+                floor:'<ul class="profile-ul"><li></li><li></li><li></li><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:['6:00','6:30','7:00','7:30','8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00']},
+                    {data:['6:00','6:30','7:00','7:30','8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00']},
+                    {data:['12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00']},
+                    {data:['12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00']}
+                ],
+                position:[1,0,1,0], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#profile-time").empty().append(data[i] + '-' + data[++i] + ' ' + data[++i] + '-' + data[++i]);
+
+                    }
+                }
+            })
+        })
+
+
+
+    </script>
+</head>
+<body>
+<div class="profile-content">
+    <div class="profile-nav">
+        <i class="iconfont icon-zuo profile-zuo"></i>
+        <div class="profile-nav-list">修改个人资料</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="profile-list-cont">
+            <ul>
+                <li><label>头像：</label><p class="profile-record-zhi"><input class="profile-cover" type="file" name="cover" accept="image/*"/><img src="img/picd.jpg" /></p><div class="clearfix"></div></li>
+                <li><label>昵称：</label><input class="profile-jiandang-input" type="text" name="" value="医生昵称" onfocus="if(this.value=='医生昵称'){this.value=''}" onblur="if(this.value==''){this.value='医生昵称'}"><div class="clearfix"></div></li>
+                <li><label>所在院区：</label><input class="profile-jiandang-input" type="text" name="" value="医院名称" onfocus="if(this.value=='医院名称'){this.value=''}" onblur="if(this.value==''){this.value='医院名称'}"><div class="clearfix"></div></li>
+                <li><label>咨询时间：</label><p class="profile-record-zhi" id="profile-time">8:30-11:30 13:30-17:30</p><div class="clearfix"></div></li>
+                <li><label>图文咨询：</label><input class="profile-jiandang-input" type="text" name="" value="请输入积分/次" onfocus="if(this.value=='请输入积分/次'){this.value=''}" onblur="if(this.value==''){this.value='请输入积分/次'}"><div class="clearfix"></div></li>
+                <li><label>电话咨询：</label><input class="profile-jiandang-input" type="text" name="" value="请输入积分/次" onfocus="if(this.value=='请输入积分/次'){this.value=''}" onblur="if(this.value==''){this.value='请输入积分/次'}"><div class="clearfix"></div></li>
+                <li><label>视频咨询：</label><p class="profile-record-zhi">未开启</p><div class="clearfix"></div></li>
+                <li><label>医生介绍：</label><textarea class="profile-jiandang-inputt">大学生求职面试自我介绍在11这一过程中非常的重要所以我们要认真对待哦。</textarea><div class="clearfix"></div></li>
+                <div class="clearfix"></div>
+            </ul>
+    </div>
+
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye"></i><p>首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren  curr"></i><p class="currfont">个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

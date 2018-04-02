@@ -1131,6 +1131,185 @@ body {
     -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
 }
 /*symmetry-result 对称性评估结果end*/
+.changeback-content{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.changeback-nav{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.changeback-zuo {
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.changeback-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    margin-left: 24%;
+    line-height: 1rem;
+}
+.changeback-pic{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 0.2rem;
+}
+.cover{
+    opacity: 0;
+    width: 100%;
+    height: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 222;
+}
+.js_upFile{
+    display: block;
+    width: 96%;
+    margin-left: 4%;
+    height: 1.2rem;
+    border: none;
+    text-align: left;
+    position: relative;
+}
+.js_upFile p{
+    width: auto;
+    height: 1.2rem;
+    color: #000;
+    font-size: 0.35rem;
+    line-height: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 111;
+}
+
+/*changeback end*/
+.profile-content{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.profile-nav{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.profile-zuo {
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.profile-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    margin-left: 24%;
+    line-height: 1rem;
+}
+.profile-list-cont{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 0.2rem;
+}
+
+.profile-list-cont ul li{
+    width: 96%;
+    margin-left: 4%;
+    height: 1rem;
+    border-bottom: 1px #dfdfdf solid;
+}
+.profile-list-cont ul li:last-of-type{
+    border-bottom: none;
+}
+.profile-list-cont ul li label{
+    width: auto;
+    float: left;
+    text-align: left;
+    font-size: 0.35rem;
+    color: #000000;
+    line-height: 1rem;
+}
+.profile-jiandang-input{
+    float: right;
+    text-align: right;
+    margin-right: 0.3rem;
+    font-size: 0.32rem;
+    color: #707070;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 60%;
+    margin-top: 0.3rem;
+}
+.profile-record-zhi{
+    float: right;
+    text-align: right;
+    margin-right: 0.3rem;
+    font-size: 0.32rem;
+    color: #707070;
+    line-height: 1rem;
+    height: 1rem;
+    width: 60%;
+    /*height: 1rem;*/
+    /*overflow: hidden;*/
+    /*text-overflow:ellipsis;*/
+    /*white-space: nowrap;*/
+    position: relative;
+}
+.profile-record-zhi img{
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px #707070 solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0.1rem;
+    right: 0;
+    z-index: 111;
+}
+.profile-jiandang-inputt{
+    float: right;
+    text-align: left;
+    margin-right: 0.3rem;
+    font-size: 0.32rem;
+    color: #707070;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    height: 3rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 61%;
+    margin-top: 0.22rem;
+}
+.profile-cover{
+    opacity: 0;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 222;
+}
+/*profileend*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 
