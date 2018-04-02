@@ -41,13 +41,20 @@
                 btn.on('change',function(){
                     var file = $(this)[0].files[0],
                         imgSrc = $(this)[0].value,
+                        imagSize =  $(this)[0].files[0].size,
                         url = URL.createObjectURL(file);
                     if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+
                         alert("请上传jpg或png格式的图片！");
                         return false;
-                    }else{
-                        img.attr('src',url);
-                    }
+
+                    }else if(imagSize>1024*1024*3){
+                            alert("图片大小应该在3M以内，为："+imagSize/(1024*1024)+"M");
+                            return false;
+                        }
+                        else {
+                            img.attr('src', url);
+                        }
                 });
             })
             // 咨询时间
