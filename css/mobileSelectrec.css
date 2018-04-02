@@ -99,7 +99,7 @@
 .mobileSelect-rec .content-rec .panel-rec .wheels-rec{
   width: 96%;
     margin-left: 2%;
-  height: 8rem;
+  height: 4rem;
   overflow: hidden;
 }
 .wheelsr-rec{
@@ -222,7 +222,7 @@
 }
 .rec-ul li{
   float: left;
-  width: 19%;
+  width: 38%;
   line-height: 0.79rem;
   height: 0.79rem;
   margin-right: 1%;
