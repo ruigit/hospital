@@ -1289,7 +1289,7 @@ body {
     text-align: left;
     margin-right: 0.3rem;
     font-size: 0.32rem;
-    color: #707070;
+    color: #d0d0d0;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -1310,6 +1310,435 @@ body {
     z-index: 222;
 }
 /*profileend*/
+.personal-content{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.personal-top{
+    width: 100%;
+    height: 3rem;
+    background: #fcfcfc url("../img/personal.jpg") no-repeat top center;
+    background-size: 100% 100%;
+}
+.personal-kongzhi{
+    width: 93%;
+    margin: 0 auto;
+    height: 1rem;
+
+}
+.shezhi{
+    font-size: 0.55rem;
+    color: #101010;
+    line-height: 1rem;
+    float: right;
+    margin-right: 0.2rem;
+}
+.lingdang{
+    font-size: 0.74rem;
+    color: #101010;
+    float: right;
+    margin-top: 0.11rem;
+}
+.personal-title{
+    width: 93%;
+    margin: 0 auto;
+    height: 2rem;
+}
+.personal-title ul li{
+    float: left;
+    width: 25%;
+}
+.personal-title ul li:last-of-type{
+    width: 75%;
+    margin-top: 0.5rem;
+}
+.personal-title ul li img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.25rem auto auto 0.15rem;
+    border: 1px #d0d0d0 solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.personal-title ul li p{
+    width: 90%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #000;
+    font-size: 0.35rem;
+    margin-left: 5%;
+    letter-spacing:0.03rem;
+}
+.personal-title ul li span{
+    width: auto;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #000;
+    font-size: 0.35rem;
+    margin-left: 5%;
+    letter-spacing:0.03rem;
+    display: block;
+    float: left;
+}
+.personalright{
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #000;
+    line-height: 0.5rem;
+    margin-left: 0.1rem;
+    float: left;
+}
+.personal-integral{
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    margin: 0.2rem auto auto auto;
+}
+.personal-integral ul li{
+    width: 33%;
+    height: 1.5rem;
+    margin: 0.25rem auto;
+    box-sizing: border-box;
+    float: left;
+    border-right: 1px #ececec solid;
+}
+.personal-integral ul li:last-of-type{
+    border: none;
+}
+.personal-integral ul li span{
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+    text-align: center;
+    color: #ec9000;
+    display: block;
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+.personal-integral ul li p{
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+}
+.personal-list-jilu{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin: 0.2rem auto auto auto;
+}
+.personal-list-jilu dl dt{
+    width: 96%;
+    margin-left: 4%;
+    height: 1rem;
+    border-bottom: 1px #ececec solid;
+    box-sizing: border-box;
+}
+.personal-list-jilu dl dt:last-of-type{
+    border: none;
+}
+.iconright{
+    font-size: 0.5rem;
+    color: #c8c7cd;
+    line-height: 1rem;
+    float: right;
+    margin-right: 0.1rem;
+}
+.personal-list-jilu dl dt p{
+    width: 80%;
+    height: 1rem;
+    font-size: 0.35rem;
+    color: #000;
+    line-height: 1rem;
+    float: left;
+    overflow: hidden;
+    text-indent: 0.1rem;
+}
+/*personalend*/
+.collection-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.collection-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.collection-zuo {
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.collection-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    margin-left: 26%;
+    line-height: 1rem;
+}
+.collection-list-content{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.collection-list-content dl dt{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 0.2rem;
+}
+.collection-list-content-top{
+    width: 100%;
+    height: 1.5rem;
+    background: #fff;
+}
+.collection-list-content-top img{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem 0.3rem auto 0.3rem;
+    border: 1px #d0d0d0 solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+.collection-list-content-top span{
+    width: 5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: block;
+    color: #000;
+    float: left;
+    font-size: 0.32rem;
+    margin-top: 0.25rem;
+    overflow: hidden;
+}
+.collection-list-content-top p{
+    width: 5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #acacac;
+    float: left;
+    font-size: 0.28rem;
+    overflow: hidden;
+}
+.collectionxin{
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+    color: #dd4198;
+}
+.collection-list-content-main{
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.collection-list-content-main span{
+    width: 95%;
+    margin: 0 2.5%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: block;
+    color: #000;
+    float: left;
+    font-size: 0.3rem;
+    overflow: hidden;
+}
+.collection-list-content-main p{
+    width: 95%;
+    margin: 0 2.5%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #acacac;
+    float: left;
+    font-size: 0.32rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.collection-list-content-main img{
+    width: 2.2rem;
+    height: 2.2rem;
+    float: left;
+    margin: 0.15rem 0.15rem;
+}
+.collection-list-content-main img:last-of-type{
+    margin: 0.15rem 0rem 0.15rem 0.15rem;
+}
+.collection-button{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.collection-face{
+    width: 40%;
+    color: #dd4198;
+    text-align: center;
+    border: none;
+    font-size: 0.32rem;
+    background: transparent;
+    line-height: 1rem;
+    margin: 0 5%;
+}
+.collection-chakan{
+    width: 39%;
+    color: #dd4198;
+    text-align: center;
+    border: none;
+    font-size: 0.32rem;
+    background: transparent;
+    line-height: 1rem;
+    margin: 0 4%;
+}
+/*collectionend*/
+.details-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.details-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.details-zuo {
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.details-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    width: 50%;
+    height: 1rem;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 12%;
+    line-height: 1rem;
+}
+.details-list-content {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.details-list-content-top{
+    width: 100%;
+    height: 1.5rem;
+    background: #fff;
+}
+.details-list-content-top img{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem 0.3rem auto 0.3rem;
+    border: 1px #d0d0d0 solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+.details-list-content-top span{
+    width: 5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: block;
+    color: #000;
+    float: left;
+    font-size: 0.32rem;
+    margin-top: 0.25rem;
+    overflow: hidden;
+}
+.details-list-content-top p{
+    width: 5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #acacac;
+    float: left;
+    font-size: 0.28rem;
+    overflow: hidden;
+}
+.detailsxin{
+    font-size: 0.4rem;
+    line-height: 1.5rem;
+    color: #151422;
+}
+.details-list-content-main{
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.details-list-content-main span{
+    width: 95%;
+    margin: 0 2.5%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: block;
+    color: #000;
+    float: left;
+    font-size: 0.3rem;
+    overflow: hidden;
+}
+.details-list-content-main p{
+    width: 95%;
+    margin: 0 2.5%;
+    height: auto;
+    line-height: 0.5rem;
+    color: #000;
+    float: left;
+    font-size: 0.32rem;
+}
+.details-list-content-main img{
+    width: 95%;
+    height: 7.5rem;
+    float: left;
+    margin: 0.15rem 2.5%;
+}
+.details-button{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+
+.details-chakan{
+    width: 50%;
+    color: #7cb7f9;
+    text-align: center;
+    border: none;
+    font-size: 0.32rem;
+    background: transparent;
+    line-height: 1rem;
+    margin: 0 25%;
+}
+.details-chakan p{
+    width: auto;
+    color: #7cb7f9;
+    text-align: center;
+    border: none;
+    font-size: 0.32rem;
+    background: transparent;
+    line-height: 1rem;
+    float: left;
+    padding-left: 25%;
+}
+.details-chakan span{
+    padding: 0.06rem 25% 0 0.1rem;
+    height: 0.5rem;
+    display:inline-block;
+}
+/*details end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

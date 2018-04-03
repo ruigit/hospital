@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".personal-content").height();
+            if(winHeight > bodyHeight){
+                $(".personal-content").css({height: winHeight});
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div class="personal-content">
+    <div class="personal-top">
+        <div class="personal-kongzhi">
+            <i class="iconfont icon-BAI-lingdang lingdang"></i>
+            <i class="iconfont icon-shezhi shezhi"></i>
+            <div class="clearfix"></div>
+        </div>
+        <div class="personal-title">
+            <ul>
+                <li>
+                    <img src="img/picd.jpg" />
+                </li>
+                <li>
+                    <p>医生名称</p>
+                    <span>个人信息</span>
+                    <i class="iconfont icon-icon-- personalright"></i>
+                    <div class="clearfix"></div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="personal-integral">
+        <ul>
+            <li>
+                <span>1354</span>
+                <p>积分</p>
+            </li>
+            <li>
+                <span>32</span>
+                <p>成功案例</p>
+            </li>
+            <li>
+                <span>1254.32</span>
+                <p>账户余额</p>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <div class="personal-list-jilu">
+        <dl>
+            <dt>
+                <p>档案管理</p>
+                <i class="iconfont icon-icon-- iconright"></i>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <p>咨询记录</p>
+                <i class="iconfont icon-icon-- iconright"></i>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <p>收藏案例</p>
+                <i class="iconfont icon-icon-- iconright"></i>
+                <div class="clearfix"></div>
+            </dt>
+        </dl>
+    </div>
+    <div class="personal-list-jilu">
+        <dl>
+            <dt>
+                <p>账户安全</p>
+                <i class="iconfont icon-icon-- iconright"></i>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <p>关于我们</p>
+                <i class="iconfont icon-icon-- iconright"></i>
+                <div class="clearfix"></div>
+            </dt>
+        </dl>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye"></i><p>首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren  curr"></i><p class="currfont">个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".collection-content").height();
+            if(winHeight > bodyHeight){
+                $(".collection-content").css({height: winHeight});
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div class="collection-content">
+    <div class="collection-nav">
+        <i class="iconfont icon-zuo collection-zuo"></i>
+        <div class="collection-nav-list">收藏案例</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="collection-list-content">
+        <dl>
+            <dt>
+                <div class="collection-list-content-top">
+                    <img src="img/picd.jpg" />
+                    <span>用户#1</span>
+                    <p>上传时间：2018.02.02 10:00</p>
+                    <i class="iconfont icon-collection collectionxin"></i>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="collection-list-content-main">
+                    <span>案例：左右乳房相似度71.2%</span>
+                    <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+                    <img src="img/scal01.png" />
+                    <img src="img/scal02.png" />
+                    <img src="img/scal03.png" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="collection-button">
+                    <button class="collection-face">专家面对面</button>
+                    <button class="collection-chakan">查看详情</button>
+                </div>
+            </dt>
+
+        </dl>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye"></i><p>首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren  curr"></i><p class="currfont">个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>
