@@ -1546,13 +1546,13 @@ body {
 .collection-list-content-main span{
     width: 95%;
     margin: 0 2.5%;
-    height: 0.5rem;
+    /*height: 0.5rem;*/
     line-height: 0.5rem;
     display: block;
     color: #000;
     float: left;
     font-size: 0.3rem;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .collection-list-content-main p{
     width: 95%;
@@ -1683,13 +1683,13 @@ body {
 .details-list-content-main span{
     width: 95%;
     margin: 0 2.5%;
-    height: 0.5rem;
+    /*height: 0.5rem;*/
     line-height: 0.5rem;
     display: block;
     color: #000;
     float: left;
     font-size: 0.3rem;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .details-list-content-main p{
     width: 95%;
