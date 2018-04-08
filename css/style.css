@@ -240,12 +240,12 @@ body {
     margin: 0.3rem auto auto 0.2rem;
 }
 .index-nav-list {
-    font-size: 0.35rem;
     float: left;
     width: 68%;
     height: 1.3rem;
     line-height: 1.3rem;
     color: #494949;
+    font-size: 0.35rem;
 }
 .index-nav-list ul li{
     width: 25%;
@@ -255,6 +255,7 @@ body {
 }
 .current{
     color: #dd4198;
+    font-size: 0.4rem;
 }
 .index-tag{
     width: 96%;
@@ -1739,6 +1740,498 @@ body {
     display:inline-block;
 }
 /*details end*/
+.expert-details-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.expert-details-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+}
+.expert-details-zuo {
+    color: #6f6f6f;
+    font-size: 0.65rem;
+    float: left;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.expert-details-nav-list {
+    color: #dd4198;
+    font-size: 0.38rem;
+    float: left;
+    width: 50%;
+    height: 1rem;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 12%;
+    line-height: 1rem;
+}
+.expert-details-list-content {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.expert-details-content-title{
+    width: 100%;
+    height: 2.5rem;
+    background: #fff url("../img/personal.jpg") no-repeat top center;
+    background-size: 100% 100%;
+    margin-bottom: 0.2rem;
+}
+.expert-details-content-title ul li {
+    float: left;
+    width: 30%;
+}
+.expert-details-content-title ul li:last-of-type {
+    width: 70%;
+    margin-top: 0.75rem;
+}
+.expert-details-content-title ul li img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0.5rem auto auto 0.45rem;
+
+    box-sizing: border-box;
+}
+.expert-details-content-title ul li p {
+    width: 90%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #000;
+    font-size: 0.35rem;
+    margin-left: 5%;
+    letter-spacing: 0.03rem;
+}
+.expert-details-content-title ul li span {
+    width: auto;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #000;
+    font-size: 0.35rem;
+    margin-left: 5%;
+    letter-spacing: 0.03rem;
+    display: block;
+    float: left;
+}
+.expert-details-content-list{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin-bottom: 0.2rem;
+    border-top: 1px #e7e7e7 solid;
+    border-bottom: 1px #e7e7e7 solid;
+    box-sizing: border-box;
+}
+.expert-details-content-list-title{
+    width: 100%;
+}
+.expert-details-content-list-title ul li{
+    width: 100%;
+    line-height: 0.7rem;
+    font-size: 0.32rem;
+    color: #656565;
+    overflow: hidden;
+    text-indent: 0.25rem;
+}
+.expert-details-content-list-title ul li span{
+    color: #000;
+    font-size: 0.35rem;
+
+    float: right;
+    margin-right: 0.3rem;
+}
+.expert-details-content-list-title ul li p{
+
+    float: right;
+    margin-right: 0.3rem;
+}
+.expert-details-content-list-title ul li:last-of-type{
+
+    color: #999999;
+}
+.expert-details-content-list-pic{
+    width: 100%;
+    margin: 0.2rem auto;
+}
+.expert-details-content-list-pic ul li{
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px #e7e7e7 solid;
+    -moz-border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+    height: auto;
+    margin-left: 2.5%;
+}
+.expert-details-content-list-pic span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 0.8rem;
+    font-size: 0.32rem;
+    color: #c3c3c3;
+    line-height: 0.8rem;
+    overflow: hidden;
+}
+.expert-details-content-list-pic p{
+    width: 100%;
+    text-align: center;
+    height: 0.8rem;
+    font-size: 0.32rem;
+    color: #c3c3c3;
+    line-height: 0.8rem;
+    overflow: hidden;
+}
+.expert-details-zixun{
+    font-size: 0.7rem;
+    margin: 0 auto 0 32%;
+    line-height: 1rem;
+    color: #98c931;
+}
+.expert-details-phone{
+    font-size: 0.7rem;
+    margin: 0 auto 0 32%;
+    line-height: 1rem;
+    color: #ff9900;
+}
+.expert-details-shipin{
+    font-size: 0.7rem;
+    margin: 0 auto 0 32%;
+    line-height: 1rem;
+    color: #7fa6e9;
+}
+.expert-details-content-doctor-introduction{
+    width: 100%;
+    background: #fff;
+    height: auto;
+    margin-bottom: 0.2rem;
+    border-top: 1px #e7e7e7 solid;
+    border-bottom: 1px #e7e7e7 solid;
+    box-sizing: border-box;
+}
+.expert-details-content-doctor-introduction span{
+    width: 50%;
+    float: left;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    font-size: 0.35rem;
+    color: #357fbc;
+    text-indent: 0.1rem;
+}
+.expert-details-introduction{
+    float: left;
+    font-size: 0.55rem;
+    line-height: 0.8rem;
+    color: #357fbc;
+    text-indent: 0.2rem;
+}
+.expert-details-content-doctor-introduction p{
+    width: 95%;
+    margin: 0 2.5%;
+    color: #000;
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    padding: 0 0 0.2rem 0;
+}
+/*expert-details end*/
+.tirbune-index-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+.tirbune-index-nav {
+    width: 100%;
+    height: 1.3rem;
+    background: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.tirbune-index-logo {
+    width: 20%;
+    height: 1.3rem;
+    float: left;
+}
+.tirbune-index-logo img {
+    width: 0.7rem;
+    height: 0.7rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px #dfdfdf solid;
+    margin: 0.3rem auto auto 0.2rem;
+}
+.tirbune-index-nav-list {
+    float: left;
+    width: 68%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    color: #494949;
+    font-size: 0.35rem;
+}
+.tirbune-index-nav-list ul li {
+    width: 25%;
+    line-height: 1.3rem;
+    float: left;
+}
+.tirbune-nav{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #b7b7b7 solid;
+}
+.tirbune-nav ul li{
+    float: left;
+    width: auto;
+    padding: 0 0.7rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #484848;
+    margin-left: 1rem;
+}
+.tirbune-chose{
+    color: #df3f95!important;
+    line-height: 0.96rem!important;
+    border-bottom: 3px #df3c95 solid;
+}
+.tirbune-content-list{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.tirbune-list-content-top {
+    width: 100%;
+    height: 1.5rem;
+    background: #fff;
+}
+.tirbune-list-content-top img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem 0.3rem auto 0.3rem;
+    border: 1px #d0d0d0 solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+.tirbune-span{
+    float: left;
+    width: 2.5rem;
+}
+.tirbune-list-content-top span {
+    width: 2.5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: block;
+    color: #000;
+    float: left;
+    font-size: 0.32rem;
+    margin-top: 0.25rem;
+    overflow: hidden;
+}
+.tirbune-list-content-top p {
+    width: 2.5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #acacac;
+    float: left;
+    font-size: 0.28rem;
+    overflow: hidden;
+}
+.tirbune-lable{
+    width: auto;
+    height: 1.5rem;
+    float: left;
+}
+.tirbune-zan {
+    font-size: 0.45rem;
+    line-height: 1.5rem;
+    color: #858585;
+}
+.tirbune-xinxi {
+    font-size: 0.45rem;
+    line-height: 1.5rem;
+    color: #858585;
+}
+.tirbune-list-content-top label{
+    line-height: 1.5rem;
+    color: #858585;
+    padding: 0 0.2rem;
+    font-size: 0.35rem;
+}
+.tirbune-content-main{
+    width: 100%;
+    height: auto;
+
+}
+.tirbune-content-main p{
+    width: 95%;
+    margin: 0 2.5%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    overflow: hidden;
+    color: #575757;
+    font-size: 0.3rem;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.tirbune-content-main ul li{
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px #e7e7e7 solid;
+    -moz-border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+    height: auto;
+    margin-left: 2.5%;
+
+}
+.tirbune-content-main ul li img{
+    width: 100%;
+    height: 2.5rem;
+    margin: 0.1rem 0;
+}
+.tirbune-list{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 0.1rem auto;
+    padding-bottom: 0.2rem;
+    border: 1px #dadada solid;
+    border-left: none;
+    border-right: none;
+}
+.float-add{
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    right: 0.3rem;
+    bottom: 1.5rem;
+    z-index: 111;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.tirbune-jiahao{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #df4198;
+}
+/*tribune end*/
+.expert-consultation-list{
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+    margin-bottom: 1.5rem;
+}
+.expert-consultation-list dl dt{
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+.expert-consultation-list-content-title {
+    width: 100%;
+    height: auto;
+    background: #fff;
+
+}
+.expert-consultation-list-content-title ul li {
+    float: left;
+    width: 30%;
+}
+.expert-consultation-list-content-title ul li:last-of-type {
+    width: 70%;
+    margin-top: 0.75rem;
+}
+.expert-consultation-list-content-title ul li img {
+    width: 1.8rem;
+    height: 2rem;
+    margin: 0.5rem auto 0.3rem 0.45rem;
+    box-sizing: border-box;
+}
+.expert-consultation-list-content-title ul li p {
+    width: 90%;
+    height: 0.6rem;
+    overflow: hidden;
+    line-height: 0.6rem;
+    color: #000;
+    font-size: 0.35rem;
+    margin-left: 5%;
+    margin-top: 0.1rem;
+    letter-spacing: 0.03rem;
+}
+.expert-consultation-list-content-title ul li span {
+    width: 90%;
+    height: 0.6rem;
+    overflow: hidden;
+    line-height: 0.6rem;
+    color: #828282;
+    font-size: 0.32rem;
+    margin-left: 5%;
+    letter-spacing: 0.03rem;
+    display: block;
+    margin-top: 0.1rem;
+    float: left;
+}
+.expert-consultation-list-content-main{
+    width: 95%;
+    height: 0.6rem;
+    overflow: hidden;
+    line-height: 0.6rem;
+    color: #828282;
+    font-size: 0.32rem;
+    margin: 0 2.5%;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    text-indent: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.expert-consultation-list-content-zixun{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px #ececec solid;
+    border-left: none;
+    border-right: none;
+    background: #fff;
+}
+.expert-consultation-list-content-zixun ul li{
+    width: 30%;
+    float: left;
+    margin-left: 3%;
+    height: 1rem;
+    line-height: 1rem;
+}
+.expert-consultation-list-content-zixun ul li p{
+    float: left;
+    font-size: 0.35rem;
+    color: #333333;
+    margin-left: 0.2rem;
+    line-height: 1rem;
+}
+.duihuazixun{
+    color: #98c931;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    float: left;
+}
+.consultation-shipin{
+    color: #7ea6eb;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    float: left;
+}
+.consultation-phone{
+    color: #df4198;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    float: left;
+}
+/*expert-consultationend*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

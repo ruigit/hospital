@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".tirbune-index-content").height();
+            if(winHeight > bodyHeight){
+                $(".tirbune-index-content").css({height: winHeight});
+            }
+        })
+    </script>
+</head>
+<body>
+<div class="tirbune-index-content">
+    <div class="tirbune-index-nav">
+        <div class="tirbune-index-logo">
+            <img src="img/picd.jpg" />
+        </div>
+        <div class="tirbune-index-nav-list">
+            <ul>
+                <li>咨讯</li>
+                <li>论坛</li>
+                <li class="current">专家</li>
+                <li>排行榜</li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <i class="iconfont icon-sousuo index-sousuo"></i>
+        <div class="clearfix"></div>
+    </div>
+<div class="expert-consultation-list">
+    <dl>
+        <dt>
+            <div class="expert-consultation-list-content-title">
+                <ul>
+                    <li>
+                        <img src="img/picd.jpg" />
+                    </li>
+                    <li>
+                        <p>专家#1</p>
+                        <span>沈阳市盛京医院</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="expert-consultation-list-content-main">沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院</div>
+            </div>
+            <div class="expert-consultation-list-content-zixun">
+                <ul>
+                    <li><i class="iconfont icon-duihuazixun duihuazixun"></i><p>图文咨询</p><div class="clearfix"></div></li>
+                    <li><i class="iconfont icon-shipin consultation-shipin"></i><p>视频咨询</p><div class="clearfix"></div></li>
+                    <!--<li><i class="iconfont icon-phone consultation-phone"></i><p>电话咨询</p><div class="clearfix"></div></li>-->
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            </dt>
+        <dt>
+            <div class="expert-consultation-list-content-title">
+                <ul>
+                    <li>
+                        <img src="img/picd.jpg" />
+                    </li>
+                    <li>
+                        <p>专家#1</p>
+                        <span>沈阳市盛京医院</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="expert-consultation-list-content-main">沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院</div>
+            </div>
+            <div class="expert-consultation-list-content-zixun">
+                <ul>
+                    <li><i class="iconfont icon-duihuazixun duihuazixun"></i><p>图文咨询</p><div class="clearfix"></div></li>
+                    <!--<li><i class="iconfont icon-shipin consultation-shipin"></i><p>视频咨询</p><div class="clearfix"></div></li>-->
+                    <li><i class="iconfont icon-phone consultation-phone"></i><p>电话咨询</p><div class="clearfix"></div></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </dt>
+        <dt>
+            <div class="expert-consultation-list-content-title">
+                <ul>
+                    <li>
+                        <img src="img/picd.jpg" />
+                    </li>
+                    <li>
+                        <p>专家#1</p>
+                        <span>沈阳市盛京医院</span>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+                <div class="expert-consultation-list-content-main">沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院沈阳市盛京医院</div>
+            </div>
+            <div class="expert-consultation-list-content-zixun">
+                <ul>
+                    <li><i class="iconfont icon-duihuazixun duihuazixun"></i><p>图文咨询</p><div class="clearfix"></div></li>
+                    <!--<li><i class="iconfont icon-shipin consultation-shipin"></i><p>视频咨询</p><div class="clearfix"></div></li>-->
+                    <li><i class="iconfont icon-phone consultation-phone"></i><p>电话咨询</p><div class="clearfix"></div></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </dt>
+    </dl>
+</div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

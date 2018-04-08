@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".tirbune-index-content").height();
+            if(winHeight > bodyHeight){
+                $(".tirbune-index-content").css({height: winHeight});
+            }
+            // 最新和热门选择
+            $(".tirbune-nav ul li").on("click", function(){
+                $(this).addClass('tirbune-chose').siblings().removeClass('tirbune-chose');
+                var imgsrc = $(this).attr("ly-id");
+                    if (imgsrc == '1'){
+                        $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 最新数据
+                        }
+                        });
+                    }else if(imgsrc == '2'){
+                        $.ajax({
+                            data : {},
+                            url : "",//接口URL地址
+                            dataType : 'json',
+                            success : function(result) {
+                                // 本月热门数据
+                            }
+                        });
+                    }
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="tirbune-index-content">
+    <div class="tirbune-index-nav">
+        <div class="tirbune-index-logo">
+            <img src="img/picd.jpg" />
+        </div>
+        <div class="tirbune-index-nav-list">
+            <ul>
+                <li>咨讯</li>
+                <li class="current">论坛</li>
+                <li>专家</li>
+                <li>排行榜</li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <i class="iconfont icon-sousuo index-sousuo"></i>
+        <div class="clearfix"></div>
+    </div>
+    <div class="tirbune-nav">
+        <ul>
+            <li ly-id="1" class="tir tirbune-chose">最新</li>
+            <li ly-id="2" class="tir">本月热门</li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+<div class="tirbune-content-list">
+    <div class="tirbune-list">
+    <div class="tirbune-list-content-top">
+        <img src="img/picd.jpg" />
+        <div class="tirbune-span">
+        <span>用户#1</span>
+        <p>25分钟前</p><div class="clearfix"></div>
+        </div>
+        <div class="tirbune-lable">
+        <i class="iconfont icon-icon_good tirbune-zan"></i><label>1990</label>
+        <i class="iconfont icon-xinxi tirbune-xinxi"></i><label>294</label>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="tirbune-content-main">
+        <p>本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门</p>
+        <ul>
+            <li>
+                <img src="img/content-pic.png" />
+            </li>
+            <li>
+                <img src="img/content-pic.png" />
+            </li>
+            <li>
+                <img src="img/content-pic.png" />
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    </div>
+    <div class="tirbune-list">
+        <div class="tirbune-list-content-top">
+            <img src="img/picd.jpg" />
+            <div class="tirbune-span">
+                <span>用户#1</span>
+                <p>25分钟前</p><div class="clearfix"></div>
+            </div>
+            <div class="tirbune-lable">
+                <i class="iconfont icon-icon_good tirbune-zan"></i><label>1990</label>
+                <i class="iconfont icon-xinxi tirbune-xinxi"></i><label>294</label>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="tirbune-content-main">
+            <p>本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门</p>
+            <ul>
+                <li>
+                    <img src="img/content-pic.png" />
+                </li>
+                <li>
+                    <img src="img/content-pic.png" />
+                </li>
+                <li>
+                    <img src="img/content-pic.png" />
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="tirbune-list">
+        <div class="tirbune-list-content-top">
+            <img src="img/picd.jpg" />
+            <div class="tirbune-span">
+                <span>用户#1</span>
+                <p>25分钟前</p><div class="clearfix"></div>
+            </div>
+            <div class="tirbune-lable">
+                <i class="iconfont icon-icon_good tirbune-zan"></i><label>1990</label>
+                <i class="iconfont icon-xinxi tirbune-xinxi"></i><label>294</label>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="tirbune-content-main">
+            <p>本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门本月热门</p>
+
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="float-add">
+    <i class="iconfont icon-jiahao tirbune-jiahao"></i>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

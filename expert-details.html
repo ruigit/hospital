@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".expert-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".expert-details-content").css({height: winHeight});
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div class="expert-details-content">
+    <div class="expert-details-nav">
+        <i class="iconfont icon-zuo expert-details-zuo"></i>
+        <div class="expert-details-nav-list">专家详情</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="expert-details-list-content">
+        <div class="expert-details-content-title">
+            <ul>
+                <li>
+                    <img src="img/picd.jpg" />
+                </li>
+                <li>
+                    <p>专家#1</p>
+                    <span>沈阳市盛京医院</span>
+                    <div class="clearfix"></div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <div class="expert-details-content-list">
+            <div class="expert-details-content-list-title">
+                <ul>
+                    <li>总服务人数：<span>26人</span><div class="clearfix"></div></li>
+                    <li>咨询时间：<p>8：30-11：30 13：00-17：30</p><div class="clearfix"></div></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <div class="expert-details-content-list-pic">
+                <ul>
+                    <li>
+                        <span>图文咨询</span>
+                        <i class="iconfont icon-duihuazixun expert-details-zixun"></i>
+                        <p>50积分/次</p>
+                    </li>
+                    <li>
+                        <span>电话咨询</span>
+                        <i class="iconfont icon-phone expert-details-phone"></i>
+                        <p>200积分/次</p>
+                    </li>
+                    <li>
+                        <span>视频咨询</span>
+                        <i class="iconfont icon-shipin expert-details-shipin"></i>
+                        <p>500积分/次</p>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="expert-details-content-doctor-introduction">
+            <i class="iconfont icon-gerenxinxi expert-details-introduction"></i>
+            <span>医生介绍</span>
+            <div class="clearfix"></div>
+            <p>医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>
