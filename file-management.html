@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".expert-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".expert-details-content").css({height: winHeight});
+            }
+            // 档案
+            $(".file-tirbune-nav ul li").on("click", function(){
+                $(this).addClass('file-tirbune-chose').siblings().removeClass('file-tirbune-chose');
+                var imgsrc = $(this).attr("ly-id");
+                if (imgsrc == '1'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 全部档案
+                        }
+                    });
+                }else if(imgsrc == '2'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 术前
+                        }
+                    });
+                }else if (imgsrc == '3'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 术后
+                        }
+                    });
+                }
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="expert-details-content">
+    <div class="expert-details-nav">
+        <i class="iconfont icon-zuo expert-details-zuo"></i>
+        <div class="expert-details-nav-list">档案管理</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="file-tirbune-nav">
+        <ul>
+            <li ly-id="1" class="tir file-tirbune-chose">全部档案</li>
+            <li ly-id="2" class="tir">术前</li>
+            <li ly-id="3" class="tir">术后</li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <div class="file-management-list">
+        <dl>
+            <dt>
+                <div class="file-management-list-top">
+                    <p>客户姓名</p>
+                    <span>术前</span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="file-management-list-content">
+                    <ul>
+                        <li>
+                            <p>年龄</p>
+                            <span>25岁</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>身高</p>
+                            <span>1.67m</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>体重</p>
+                            <span>53.4kg</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>胸部大小</p>
+                            <span>左-30C 右-30C</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>病情</p>
+                            <span>左-全背阔肌乳房重建手术<br />右-全背阔肌乳房重建手术</span>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="file-management-list-bottom">
+                    <p>诊断</p>
+                </div>
+            </dt>
+            <dt>
+                <div class="file-management-list-top">
+                    <p>客户姓名</p>
+                    <span>术前</span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="file-management-list-content">
+                    <ul>
+                        <li>
+                            <p>年龄</p>
+                            <span>25岁</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>身高</p>
+                            <span>1.67m</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>体重</p>
+                            <span>53.4kg</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>胸部大小</p>
+                            <span>左-30C 右-30C</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>病情</p>
+                            <span>左-全背阔肌乳房重建手术<br />右-全背阔肌乳房重建手术</span>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="file-management-list-bottom">
+                    <p>诊断</p>
+                </div>
+            </dt>
+            <dt>
+                <div class="file-management-list-top">
+                    <p>客户姓名</p>
+                    <span>术前</span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="file-management-list-content">
+                    <ul>
+                        <li>
+                            <p>年龄</p>
+                            <span>25岁</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>身高</p>
+                            <span>1.67m</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>体重</p>
+                            <span>53.4kg</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>胸部大小</p>
+                            <span>左-30C 右-30C</span>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <p>病情</p>
+                            <span>左-全背阔肌乳房重建手术<br />右-全背阔肌乳房重建手术</span>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="file-management-list-bottom">
+                    <p>诊断</p>
+                </div>
+            </dt>
+        </dl>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

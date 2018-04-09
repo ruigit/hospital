@@ -2232,6 +2232,293 @@ body {
     float: left;
 }
 /*expert-consultationend*/
+.expert-ranking{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    /*padding-bottom: 1.5rem;*/
+}
+.expert-ranking ul li{
+    float: left;
+}
+.expert-ranking ul li:first-of-type{
+    width: 21%;
+}
+.expert-ranking ul li:first-of-type img{
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 0.25rem auto 0.25rem 0.2rem;
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5) inset;
+
+}
+.expert-ranking ul li:nth-of-type(2){
+    width: 61%;
+}
+.expert-ranking ul li:nth-of-type(2) span{
+    width: 98%;
+    height: auto;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+    color: #000;
+    margin-left: 2%;
+    display: block;
+}
+.expert-ranking-title{
+    margin-top: 0.15rem;
+}
+.expert-ranking ul li:nth-of-type(3){
+    width: 18%;
+}
+.expert-ranking ul li:nth-of-type(3) p{
+    width: 85%;
+    margin: 0.65rem 7.5% auto 7.5%;
+    border: 1px #01abe9 solid;
+    box-sizing: border-box;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #01abe9;
+    font-size: 0.3rem;
+    text-align: center;
+}
+.ranking-weibiao{
+    font-size: 0.3rem;
+    color: #01abe9;
+    line-height: 0.5rem;
+}
+.expert-ranking-list{
+    width: 100%;
+    height: auto;
+    border-top: 2px #f2f2f2 solid;
+    background: #fff;
+    padding-bottom: 1.5rem;
+}
+.expert-ranking-list dl dt{
+    border-bottom: 1px #f2f2f2 solid;
+    width: 100%;
+    height: auto;
+}
+.expert-ranking-list dl dt ul li{
+    float: left;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #000;
+    line-height: 1.5rem;
+    height: 1.5rem;
+}
+.expert-ranking-list dl dt ul li{
+    width: 30%;
+}
+.expert-ranking-list dl dt ul li:last-of-type{
+    width: 40%;
+}
+.expert-ranking-list dl dt:first-of-type ul li{
+    line-height: 1rem;
+    height: 1rem;
+}
+.expert-ranking-list dl dt:first-of-type ul li{
+    width: 30%;
+}
+.expert-ranking-list dl dt:first-of-type ul li:last-of-type{
+    width: 40%;
+}
+.expert-ranking-list dl dt ul li p{
+    width: 0.55rem;
+    height: 0.55rem;
+    line-height: 0.57rem;
+    font-size: 0.35rem;
+    color: #000;
+    margin: 0.45rem auto;
+
+}
+.expert-ranking-list dl dt:nth-of-type(2) ul li p{
+    color: #fff;
+    background: #f34254;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt:nth-of-type(3) ul li p{
+    color: #fff;
+    background: #ffc548;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt:nth-of-type(4) ul li p{
+    color: #fff;
+    background: #d0d36c;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt:nth-of-type(5) ul li p{
+    color: #fff;
+    background: #a6d7de;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt:nth-of-type(6) ul li p{
+    color: #fff;
+    background: #aed9ea;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt:nth-of-type(3) ul li p{
+    color: #fff;
+    background: #ffc548;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    box-sizing: border-box;
+}
+.expert-ranking-list dl dt ul li span{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.35rem;
+    color: #00a9ea;
+    display: block;
+}
+.expert-ranking-list dl dt ul li img{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin: 0.1rem auto 0.1rem 32%;
+    vertical-align: top;
+    float: left;
+}
+.expert-ranking-list dl dt ul li label{
+    width: 100%;
+    color: #000;
+    font-size: 0.35rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+/*expert-rankingend*/
+.file-tirbune-nav {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 1px #b7b7b7 solid;
+}
+.file-tirbune-nav ul li {
+    float: left;
+    width: auto;
+    padding: 0 0.2rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #484848;
+    margin-left: 0.7rem;
+}
+.file-tirbune-nav ul li:last-of-type {
+
+    margin-left: 1rem;
+}
+.file-tirbune-chose {
+    color: #df3f95!important;
+    line-height: 0.96rem!important;
+    border-bottom: 3px #df3c95 solid;
+}
+.file-management-list{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+.file-management-list dl dt{
+    margin-top: 0.1rem;
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.file-management-list-top{
+    width: 95%;
+    margin-left: 5%;
+    border-bottom: 1px #e4e4e4 solid;
+    height: 1rem;
+    box-sizing: border-box;
+}
+.file-management-list-top p{
+    width: 30%;
+    height: 1rem;
+    line-height: 1rem;
+    color: #000;
+    font-size: 0.32rem;
+    text-align: left;
+    float: left;
+}
+.file-management-list-top span{
+    width: 66%;
+    margin-right: 4%;
+    height: 1rem;
+    line-height: 1rem;
+    color: #000;
+    font-size: 0.32rem;
+    text-align: right;
+    display: block;
+    float: left;
+
+}
+.file-management-list-content{
+    width: 100%;
+    border-bottom: 1px #e4e4e4 solid;
+    box-sizing: border-box;
+}
+.file-management-list-content ul li{
+    width: 95%;
+    margin-left: 5%;
+    /*height: 0.6rem;*/
+}
+.file-management-list-content ul li p{
+    width: 30%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    color: #666666;
+    font-size: 0.3rem;
+    text-align: left;
+    float: left;
+}
+.file-management-list-content ul li span{
+    width: 67%;
+    margin-right: 3%;
+    height: auto;
+    line-height: 0.6rem;
+    color: #666666;
+    font-size: 0.3rem;
+    text-align: right;
+    display: block;
+    float: left;
+
+}
+.file-management-list-bottom{
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.2rem;
+}
+.file-management-list-bottom p{
+    width: 1.8rem;
+    height: 0.6rem;
+    margin: 0.2rem 3% auto auto;
+    line-height: 0.6rem;
+    font-size: 0.32rem;
+    text-align: center;
+    color: #000;
+    box-sizing: border-box;
+    border: 1px #e4e4e4 solid;
+    -moz-border-radius: 0.01rem;
+    -webkit-border-radius: 0.01rem;
+    border-radius: 0.01rem;
+}
+/*file-management end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 
