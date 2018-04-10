@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--切换手术案例-->
+    <link rel="stylesheet" href="css/mobileSelectoper.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <!--切换手术案例-->
+    <script type="text/javascript" src="js/mobileSelectoper.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".collection-content").height();
+            if(winHeight > bodyHeight){
+                $(".collection-content").css({height: winHeight});
+            }
+            // 切换手术案例
+            var mobileSelect = new MobileSelect({
+                trigger: '#rank-chang',
+                title: '切换手术案例',
+                floor:'<ul class="column-ul"><p>左乳</p><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术胃'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]},
+                    {data:[
+                            {id:'1',value:'动脉导管未闭结扎术'},
+                            {id:'2',value:'肺肿瘤局部切除术胃'},
+                            {id:'3',value:'房间隔缺损修补术'},
+                            {id:'4',value:'喉切除术和喉造口术'},
+                            {id:'5',value:'巴氏腺囊肿切除术'}
+                        ]}
+                ],
+                position:[3,1], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#rank-span").empty().append('左' + ' - ' + data[i].value + '<br />' + '右' + ' - ' + data[++i].value);
+
+                    }
+                }
+            })
+            // 最新和术后相似度
+            $(".same-tirbune-nav ul li").on("click", function(){
+                $(this).addClass('same-tirbune-chose').siblings().removeClass('same-tirbune-chose');
+                var imgsrc = $(this).attr("ly-id");
+                if (imgsrc == '1'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 最新数据
+                        }
+                    });
+                }else if(imgsrc == '2'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 本月热门数据
+                        }
+                    });
+                }
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="collection-content">
+    <div class="collection-nav">
+        <i class="iconfont icon-zuo collection-zuo"></i>
+        <div class="collection-nav-list">相同案例</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="expert-ranking">
+        <ul>
+            <li>
+                <img src="img/picd.jpg">
+            </li>
+            <li>
+                <span class="expert-ranking-title">手术案例：</span>
+                <span id="rank-span">左-全背阔肌乳房重建手术<br />右-全背阔肌乳房重建手术</span>
+            </li>
+            <li>
+                <p id="rank-chang">
+                    <i class="iconfont icon-weibiaoti7 ranking-weibiao"></i>
+                    切换
+                </p>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <div class="same-tirbune-nav">
+        <ul>
+            <li ly-id="1" class="tir same-tirbune-chose">最新</li>
+            <li ly-id="2" class="tir">术后相似度</li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <div class="same-collection-list-content">
+        <dl>
+            <dt>
+                <div class="same-collection-list-content-top">
+                    <img src="img/picd.jpg" />
+                    <span>用户#1</span>
+                    <p>上传时间：2018.02.02 10:00</p>
+                    <i class="iconfont icon-tianjiaguanzhu same-detailsxin"></i>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="same-collection-list-content-main">
+                    <span>案例：左右乳房相似度71.2%</span>
+                    <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+                    <img src="img/scal01.png" />
+                    <img src="img/scal02.png" />
+                    <img src="img/scal03.png" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="same-collection-button">
+                    <button class="same-collection-face">专家面对面</button>
+                    <button class="same-collection-chakan">查看详情</button>
+                </div>
+            </dt>
+            <dt>
+                <div class="same-collection-list-content-top">
+                    <img src="img/picd.jpg" />
+                    <span>用户#1</span>
+                    <p>上传时间：2018.02.02 10:00</p>
+                    <i class="iconfont icon-tianjiaguanzhu same-detailsxin"></i>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="same-collection-list-content-main">
+                    <span>案例：左右乳房相似度71.2%</span>
+                    <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+                    <img src="img/scal01.png" />
+                    <img src="img/scal02.png" />
+                    <img src="img/scal03.png" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="same-collection-button">
+                    <button class="same-collection-face">专家面对面</button>
+                    <button class="same-collection-chakan">查看详情</button>
+                </div>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+</body>
+</html>
