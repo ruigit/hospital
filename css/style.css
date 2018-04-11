@@ -2816,7 +2816,8 @@ body {
 .bbs-details-list-content {
     width: 100%;
     height: auto;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: #f2f2f2;
 }
 .bbs-details-list-content-top {
     width: 100%;
@@ -2885,12 +2886,159 @@ body {
 }
 .bbs-content-list dl dt{
     width: 98%;
-    height: 2rem;
+    height: auto;
     background: #fff;
     margin: 0.1rem 1% auto 1%;
     box-sizing: border-box;
     border: 1px #dadada solid;
     border-radius: 0.05rem;
+}
+.bbs-content-list-top{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-bottom: 1px #e0e0e0 solid;
+}
+.bbs-content-list-bottom{
+    width: 100%;
+    height: auto;
+}
+.bbs-content-list-bottom p{
+    width: 60%;
+    float: left;
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    color: #cccccc;
+    text-indent: 1.5rem;
+}
+.bbs-xinxi{
+    float: right;
+    font-size: 0.35rem;
+    line-height: 0.8rem;
+    color: #868686;
+    margin-right: 0.5rem;
+}
+.bbs-content-list-top-left{
+    width: 20%;
+    float: left;
+}
+.bbs-content-list-top-left img{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem auto auto 0.2rem;
+    box-sizing: border-box;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.bbs-content-list-top-right{
+    width: 80%;
+    float: left;
+}
+.bbs-content-list-top-right ul li{
+    width: 100%;
+}
+.bbs-content-list-top-right ul li:first-of-type span{
+    width: auto;
+    display: block;
+    float: left;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    color: #212121;
+    padding: 0 0.15rem 0 0;
+}
+.bbs-content-list-top-right ul li:first-of-type p{
+    width: auto;
+    float: left;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.25rem;
+    color: #868686;
+}
+.bbs-content-list-top-right ul li:first-of-type label{
+    width: auto;
+    float: right;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.26rem;
+    color: #868686;
+    margin-right: 0.2rem;
+}
+.bbs-good{
+    float: right;
+    font-size: 0.38rem;
+    line-height: 0.8rem;
+    color: #868686;
+    margin-right: 0.15rem;
+}
+.bbs-content-list-top-right ul li:last-of-type p{
+    width: 98%;
+    margin-right: 2%;
+    height: 1.2rem;
+    line-height: 0.4rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.25rem;
+    color: #868686;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.bbs-bottom-input{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5555;
+    background: #fff;
+}
+.bbs-xiaolianwawa{
+    float: left;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    color: #b5afa3;
+    margin-left: 0.2rem;
+}
+.bbs-bottom-input p{
+    width: auto;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin: 0.2rem 0.2rem auto auto;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+    -moz-border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    border-radius: 0.08rem;
+    background: #df4198;
+    font-size: 0.3rem;
+    color: #fff;
+    float: right;
+}
+.bbs-input {
+    background:#fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px #df4198 solid;
+    box-shadow: none;
+    border-radius: unset;
+    text-indent: 0.1rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 65%;
+    font-size: 0.32rem;
+    color: #ababab;
+    margin: 0.25rem auto auto 3%;
+    float: left;
+}
+.bbs-details-content {
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
 }
 /*bbs-content end*/
 /*pad-pro横屏*/

@@ -27,16 +27,27 @@
         $(document).ready(function() {
             //		背景高度
             var winHeight = window.innerHeight;
-            var bodyHeight = $(".details-content").height();
+            var bodyHeight = $(".bbs-details-content").height();
             if(winHeight > bodyHeight){
-                $(".details-content").css({height: winHeight});
+                $(".bbs-details-content").css({height: winHeight});
             }
+            $(".bbs-bottom-input p").on("click", function(){
+                var oldvalue = $("#bbs-input").val();
+                if (oldvalue != "你怎么看？"){
+                    $("#bbs-input").val("你怎么看？");
+                    var list = document.getElementById('bbs-list');
+                    var tempHTML = "";
+                    tempHTML = '<dt>' + '<div class="bbs-content-list-top">' + '<div class="bbs-content-list-top-left">' + '<img src="img/picd.jpg" />' + '</div>' + '<div class="bbs-content-list-top-right">' + '<ul>' + '<li>' + '<span>必康山</span>' + '<p>沈阳医大二院 主治医生</p>' + '<label class="bbs-num">1</label>' + '<i class="iconfont icon-icon_good bbs-good"></i>' + '<div class="clearfix"></div>' + '</li>' + '<li>'+ "<p>" + oldvalue + "</p>"+ "</li>" + "</ul>" + "</div>" + "<div class=\"clearfix\"></div>" + "</div>" + "<div class=\"bbs-content-list-bottom\">" + "<p>25分钟前</p>" + "<i class=\"iconfont icon-xinxi bbs-xinxi\"></i>" + "<div class=\"clearfix\"></div>" + "</div>" + "</dt>";
+                    list.innerHTML += tempHTML;
+                }
+            });
+
         })
 
     </script>
 </head>
 <body>
-<div class="details-content">
+<div class="bbs-details-content">
     <div class="details-nav">
         <i class="iconfont icon-zuo details-zuo"></i>
         <div class="details-nav-list">标题名标题名标题名标题名</div>
@@ -59,12 +70,43 @@
             <div class="clearfix"></div>
         </div>
         <div class="bbs-content-list">
-            <dl>
+            <dl id="bbs-list">
                 <dt>
-
+                    <div class="bbs-content-list-top">
+                        <div class="bbs-content-list-top-left">
+                            <img src="img/picd.jpg" />
+                        </div>
+                        <div class="bbs-content-list-top-right">
+                            <ul>
+                                <li>
+                                    <span>必康山</span>
+                                    <p>沈阳医大二院 主治医生</p>
+                                    <label class="bbs-num">1</label>
+                                    <i class="iconfont icon-icon_good bbs-good"></i>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <p>沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院沈阳医大二院</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="bbs-content-list-bottom">
+                        <p>25分钟前</p>
+                        <i class="iconfont icon-xinxi bbs-xinxi"></i>
+                        <div class="clearfix"></div>
+                    </div>
                 </dt>
+
             </dl>
         </div>
+    </div>
+    <div class="bbs-bottom-input">
+        <i class="iconfont icon-xiaolianwawa bbs-xiaolianwawa"></i>
+        <input class="bbs-input" id="bbs-input" type="text" name="" value="你怎么看？" onfocus="if(this.value=='你怎么看？'){this.value=''}" onblur="if(this.value==''){this.value='你怎么看？'}">
+        <p>发布</p>
+        <div class="clearfix"></div>
     </div>
 </div>
 
