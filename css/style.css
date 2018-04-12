@@ -3252,6 +3252,99 @@ body {
     line-height: 1rem;
 }
 /*change-password end*/
+.integrali-list{
+    width: 95%;
+    height: auto;
+    margin: 0.2rem 2.5%;
+    background: #fff;
+}
+.integrali-list p {
+    border-bottom: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    padding-bottom: 0.05rem;
+    height: 1rem;
+    width: 90%;
+    margin: 0.2rem 5%;
+}
+.integrali-list p:last-of-type {
+
+    padding-bottom: 0.05rem;
+    height: 1.5rem;
+
+}
+.integrali-list p span{
+    height: 1rem;
+    line-height: 1rem;
+    width: auto;
+    float: left;
+    font-size: 0.7rem;
+    color: #000;
+    margin-top: 0.25rem;
+    display: block;
+}
+.integrali-list label{
+    line-height: 0.6rem;
+    width: 90%;
+    margin: 0 5%;
+    font-size: 0.35rem;
+    color: #000;
+    display: block;
+    padding-top: 0.2rem;
+}
+.integrali-list label:first-of-type{
+    padding-top: 0.6rem;
+}
+.integrali-list-btn-info {
+    width: 90%;
+    background: #df4198;
+    line-height: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.36rem;
+    text-align: center;
+    color: #fff;
+    -moz-border-radius: 0.05rem;
+    -webkit-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    margin: 0.5rem 5% 0.7rem 5%;
+    border: none;
+}
+.integrali-list-input {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    text-indent: 0;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 80%;
+    font-size: 0.32rem;
+    color: #000;
+    margin-top: 0.25rem;
+    float: left;
+}
+.integrali-list-inputr {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    text-indent: 0.2rem;
+    height: 1rem;
+    line-height: 1rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 80%;
+    font-size: 0.7rem;
+    color: #000;
+    margin-top: 0.25rem;
+    float: left;
+}
+/*Integral end*/
+.wodejifen{
+    line-height: 1rem;
+    font-size: 0.7rem;
+    color: #000;
+}
+/*withdrawal end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 
