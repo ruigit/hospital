@@ -27,32 +27,34 @@
         $(document).ready(function() {
             //		背景高度
             var winHeight = window.innerHeight;
-            var bodyHeight = $(".symmetry-result-content").height();
+            var bodyHeight = $(".collection-content").height();
             if(winHeight > bodyHeight){
-                $(".symmetry-result-content").css({height: winHeight});
+                $(".collection-content").css({height: winHeight});
             }
-
         })
+
     </script>
 </head>
 <body>
-<div class="symmetry-result-content">
-    <div class="symmetry-result-nav">
-        <i class="iconfont icon-zuo symmetry-result-zuo"></i>
-        <div class="symmetry-result-nav-list">对称性评估结果</div>
-    </div>
-    <div class="symmetry-result-updata">
-    <div class="symmetry-result-updata-top-l"></div>
-    <div class="symmetry-result-updata-top-r"></div>
+<div class="collection-content">
+    <div class="collection-nav">
+        <i class="iconfont icon-zuo collection-zuo"></i>
+        <div class="collection-nav-list">关于我们</div>
         <div class="clearfix"></div>
-    <div class="symmetry-result-updata-con"></div>
     </div>
-    <div class="symmetry-result-updata-rusu">
-        <p>整体对称相似度94.2%</p>
-        <span>初始化</span>
+    <div class="about-us">
+        <p>版本号</p>
+        <span>V1.0</span>
+        <div class="clearfix"></div>
     </div>
-
-    <div class="symmetry-result-button">保存</div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye"></i><p>首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren  curr"></i><p class="currfont">个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
 </div>
 </body>
 </html>
