@@ -1128,6 +1128,11 @@ body {
     box-sizing: border-box;
     /*border: 1px #dfdfdf solid;*/
 }
+.symmetry-result-updata img{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 .symmetry-result-updata-rusu{
     width: 100%;
     height: 1.5rem;
