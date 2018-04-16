@@ -861,23 +861,26 @@ body {
     font-size: 0.3rem;
     color: #dd4198;
 }
+.operation-list dl dt ul li span{
+    font-size: 0.3rem;
+}
 .operation-list dl dt ul li:nth-child(1){
-    width: 63%;
+    width: 40%;
     text-align: left;
 }
 .operation-list dl dt ul li:nth-child(2){
-    width: 18.5%;
+    width: 29.5%;
     text-align: center;
 }
 .operation-list dl dt ul li:nth-child(3){
-    width: 18.5%;
+    width: 29.5%;
     text-align: center;
 }
 .operation-list-color{
     color: #010101!important;
 }
 .liwidth{
-    width: 33% !important;
+    width: 58% !important;
 }
 .column{
     width: 100%;
