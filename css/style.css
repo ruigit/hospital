@@ -1144,14 +1144,12 @@ body {
     height: 1.5rem;
 }
 .symmetry-result-updata-rusu p{
-    width: 95%;
-    margin-left: 5%;
-    float: left;
+    width: 100%;
     height: 0.75rem;
     line-height: 0.75rem;
     font-size: 0.45rem;
     color: #facce6;
-    text-align: left;
+    text-align: center;
     text-shadow: #df3c95 2px 0 0, #df3c95 0 2px 0, #df3c95 -2px 0 0, #df3c95 0 -2px 0;
     -webkit-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
     -moz-text-shadow: #df3c95 2px 0 0,#df3c95 0 2px 0,#df3c95 -2px 0 0,#df3c95 0 -2px 0;
