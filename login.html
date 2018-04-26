@@ -32,14 +32,29 @@
                 $(".login-content").css({height: winHeight});
             }
             // 显示隐藏密码
-            $(".login-icon").on("click",function () {
-                if($("#lpass").hasClass('pas')) {
-                    $("#lpass").prop("type", "text");
-                    $("#lpass").removeClass("pas");
-                }else {
-                    $("#lpass").prop("type", "password");
-                    $("#lpass").addClass("pas");
+            $("#lpass").blur(function(){
+                if($("#lpass").val()=='请输入登陆密码'){
+                    $("#lpass").attr("type", "text");
+                    $(".login-icon").show();
+                    $(".login-clas").hide();
+                }})
+            $(".login-ic").on("click",function () {
+                if($("#lpass").val()!='请输入登陆密码') {
+                    if($("#lpass").hasClass('pas')) {
+                        $("#lpass").prop("type", "text");
+                        $("#lpass").removeClass("pas");
+                        $(".login-icon").show();
+                        $(".login-clas").hide();
+                        // $('#lpass').removeAttr("disabled");
+                    }else {
+                        $("#lpass").prop("type", "password");
+                        $("#lpass").addClass("pas");
+                        $(".login-icon").hide();
+                        $(".login-clas").show();
+                        // $('#lpass').attr("disabled",true);
+                    }
                 }
+
             })
         })
     </script>
@@ -54,7 +69,8 @@
 
         <p>
             <input class="login-input" id="lpass" type="text" name="psw" value="请输入登陆密码" onfocus="if(this.value=='请输入登陆密码'){this.value=''}" onblur="if(this.value==''){this.value='请输入登陆密码'}">
-            <i class="iconfont icon-chakan login-icon"></i>
+            <i class="iconfont icon-chakan login-ic login-icon"></i>
+            <i class="iconfont icon-yincang login-ic login-clas"></i>
         </p>
         <span>忘记密码？</span>
         <div class="clearfix"></div>

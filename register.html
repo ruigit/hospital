@@ -29,6 +29,12 @@
             var winHeight = window.innerHeight;
             $(".register-content").css({height: winHeight});
             // 显示隐藏密码
+            $("#upass").blur(function(){
+            if($("#upass").val()=='请设置密码(6~16位数字或字母)'){
+                $("#upass").attr("type", "text");
+                $(".register-icon").show();
+                $(".register-clas").hide();
+            }})
             $(".register-ic").on("click",function () {
                 if($("#upass").val()!='请设置密码(6~16位数字或字母)') {
                 if($("#upass").hasClass('pas')) {
@@ -36,12 +42,13 @@
                     $("#upass").removeClass("pas");
                     $(".register-icon").show();
                     $(".register-clas").hide();
-
+                    // $('#upass').removeAttr("disabled");
                 }else {
                     $("#upass").prop("type", "password");
                     $("#upass").addClass("pas");
                     $(".register-icon").hide();
                     $(".register-clas").show();
+                    // $('#upass').attr("disabled",true);
                 }
                 }
             })

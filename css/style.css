@@ -135,9 +135,13 @@ body {
 .register-con p{
     border-bottom: 1px solid #e7e7e7;
     box-sizing: border-box;
-    padding-bottom: 0.05rem;
+    padding-bottom: 0.5rem;
     margin-top: 0.2rem;
     height: 1rem;
+}
+.register-con p:last-of-type{
+
+    height: 1.1rem;
 }
 .register-input{
     background: #fff;
@@ -479,6 +483,14 @@ body {
     float: right;
     line-height: 1rem;
     margin-right: 0.22rem;
+}
+.login-clas {
+    font-size: 0.45rem;
+    color: #fff;
+    float: right;
+    line-height: 1rem;
+    margin-right: 0.22rem;
+    display: none;
 }
 .login-form span{
     width: 30%;
