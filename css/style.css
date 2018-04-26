@@ -168,6 +168,14 @@ body {
     line-height: 1rem;
     margin-right: 0.22rem;
 }
+.register-clas{
+    display: none;
+    font-size: 0.45rem;
+    color: #c8c7cc;
+    float: right;
+    line-height: 1rem;
+    margin-right: 0.22rem;
+}
 .register-btn-info{
     width: 80%;
     background: #df4198;
