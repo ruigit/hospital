@@ -38,19 +38,25 @@
                     $(".login-icon").show();
                     $(".login-clas").hide();
                 }})
+            $("#lpass").focus(function(){
+                if($("#lpass").val()==''){
+                    $("#lpass").attr("type", "password");
+                    $(".login-icon").hide();
+                    $(".login-clas").show();
+                }})
             $(".login-ic").on("click",function () {
                 if($("#lpass").val()!='请输入登陆密码') {
                     if($("#lpass").hasClass('pas')) {
-                        $("#lpass").prop("type", "text");
-                        $("#lpass").removeClass("pas");
-                        $(".login-icon").show();
-                        $(".login-clas").hide();
-                        // $('#lpass').removeAttr("disabled");
-                    }else {
                         $("#lpass").prop("type", "password");
-                        $("#lpass").addClass("pas");
+                        $("#lpass").removeClass("pas");
                         $(".login-icon").hide();
                         $(".login-clas").show();
+                        // $('#lpass').removeAttr("disabled");
+                    }else {
+                        $("#lpass").prop("type", "text");
+                        $("#lpass").addClass("pas");
+                        $(".login-icon").show();
+                        $(".login-clas").hide();
                         // $('#lpass').attr("disabled",true);
                     }
                 }
