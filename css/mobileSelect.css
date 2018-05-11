@@ -196,6 +196,17 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.t-ops-ul li{
+  float: left;
+  width: 100%;
+  line-height: 0.79rem;
+  height: 0.79rem;
+  text-align: right;
+  border-top: 2px solid #dd4198;
+  border-bottom: 2px solid #dd4198;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .profile-ul li {
   float: left;
   width: 23%;
