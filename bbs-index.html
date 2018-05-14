@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-index-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-index-content").css({height: winHeight});
+            }
+            // 选择拟行手术
+            $(".bbs-all").on("click", function(){
+                $(this).addClass('bbs-change-col').siblings().removeClass('bbs-change-col');
+                $.ajax({
+                    data : {},
+                    url : "",//接口URL地址
+                    dataType : 'json',
+                    success : function(result) {
+                        // 全部
+                    }
+                });
+            });
+            $(".bbs-changedate").on("click", function(){
+                $(this).addClass('bbs-change-col').siblings().removeClass('bbs-change-col');
+                $.ajax({
+                    data : {},
+                    url : "",//接口URL地址
+                    dataType : 'json',
+                    success : function(result) {
+                        // 手术类型
+                    }
+                });
+            });
+            function getQueryString(data) {
+                var reg = new RegExp("(^|&)" + data + "=([^&]*)(&|$)", "i");
+                var r = decodeURI(window.location.search.substr(1)).match(reg); //获取url中"?"符后的字符串并正则匹配
+                var context = "";
+                if (r != null)
+                    context = r[2];
+                reg = null;
+                r = null;
+                return context == null || context == "" || context == "undefined" ? "" : context;
+            }
+            $(".bbs-change-til").on("click", function(){
+                window.location="change-operation.html";
+            });
+
+            var str = getQueryString("data");
+            // console.log(str);
+            $(".bbs-changedate").empty().append(str);
+            // $(function(){
+            //     var data=$.cookie("data");
+            //     var m=JSON.parse(data);
+            //     console.log(m)
+            //     $(".bbs-changedate").empty().append(m);
+            //     $(".bbs-all").removeClass('bbs-change-col');
+            // })
+            // 全部案例咨询
+            $(".bbs-change-list-chage1 ul li").on("click", function(){
+                $(this).addClass('bbs-change-col').siblings().removeClass('bbs-change-col');
+                var lyi = $(this).attr("ly-id");
+                if (lyi == '0'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 全部
+                        }
+                    });
+                }else if(lyi == '1'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 案例
+                        }
+                    });
+                }else if (lyi == '2'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 咨询
+                        }
+                    });
+                }
+            });
+            // 全部左乳右乳
+            $(".bbs-change-list-chage2 ul li").on("click", function(){
+                $(this).addClass('bbs-change-col').siblings().removeClass('bbs-change-col');
+                var lyi = $(this).attr("ly-id");
+                if (lyi == '0'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 全部
+                        }
+                    });
+                }else if(lyi == '1'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 左乳
+                        }
+                    });
+                }else if (lyi == '2'){
+                    $.ajax({
+                        data : {},
+                        url : "",//接口URL地址
+                        dataType : 'json',
+                        success : function(result) {
+                            // 右乳
+                        }
+                    });
+                }
+            });
+
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-index-content">
+    <div class="bbs-index-nav">
+        <i class="iconfont icon-zuo bbs-index-zuo"></i>
+        <div class="bbs-index-nav-list">论坛</div>
+        <i class="iconfont icon-sousuo bbs-index-right"></i>
+        <div class="clearfix"></div>
+    </div>
+<div class="bbs-change-list">
+    <dl>
+        <dt class="bbs-change-list-chage">
+            <ul>
+                <li class="bbs-all bbs-change-col">全部</li>
+                <li class="bbs-changedate"></li>
+                <li class="bbs-change-til">选择拟行手术</li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+        <dt class="bbs-change-list-chage1">
+            <ul>
+                <li class="bbs-change-col" ly-id="0">全部</li>
+                <li ly-id="1">案例</li>
+                <li ly-id="2">咨询</li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+        <dt class="bbs-change-list-chage2">
+            <ul>
+                <li class="bbs-change-col" ly-id="0">全部</li>
+                <li ly-id="1">左乳</li>
+                <li ly-id="2">右乳</li>
+                <div class="clearfix"></div>
+            </ul>
+        </dt>
+    </dl>
+</div>
+    <div class="bbs-content-main-list">
+        <dl>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+            <dt>
+                <div class="bbs-content-main-list-l">
+                    <img src="img/biao.png" />
+                    <span>95%</span>
+                </div>
+                <div class="bbs-content-main-list-r">
+                    <p>论坛名称论坛名称论坛名称论坛名称论坛名称</p>
+                    <label>会员</label><label>案例</label><label>左乳</label>
+                    <span class="bbs-fbr">
+                        <img src="img/picd.jpg">
+                        发布人
+                    </span>
+                    <span class="bbs-time">2018-05-10 13:20</span>
+                </div>
+                <div class="clearfix"></div>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+</body>
+</html>

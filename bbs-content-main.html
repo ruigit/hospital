@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-content-main-bb-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-content-main-bb-content").css({height: winHeight});
+            }
+            // 查看全部
+            $(".bbs-content-button").on("click", function(){
+                $(".bbs-content-button").hide();
+                $(".bbs-content-display").show();
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-content-main-bb-content">
+    <div class="bbs-content-main-nav">
+        <i class="iconfont icon-zuo bbs-content-main-zuo"></i>
+        <div class="bbs-content-main-nav-list">论坛名论坛名论坛名论坛名论坛名论坛名</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bbs-content-main-content">
+        <div class="bbs-content-main-top">
+            <img src="img/picd.jpg" />
+            <span>用户#1</span>
+            <p>上传时间：2018.02.02 10:00</p>
+            <i class="iconfont icon-tianjiaguanzhu bbs-content-main-xin"></i>
+            <div class="clearfix"></div>
+        </div>
+        <div class="bbs-content-main-contma">
+            <img src="img/zdjg.jpg">
+            <span>术前诊断图</span>
+            <img src="img/zdjg.jpg">
+            <span>术后诊断图</span>
+            <label>患者病情</label>
+            <p>帕金森综合征</p>
+            <label>手术名称</label>
+            <p>帕金森综合征</p>
+            <label>术后相似度</label>
+            <p>95%</p>
+            <div class="clearfix"></div>
+        </div>
+        <div class="bbs-content-button">消耗10积分查看全部病例内容</div>
+        <div class="bbs-content-display">
+            <h4>患者详情</h4>
+            <div class="bbs-content-display-contma">
+                <label>年龄</label>
+                <p>20</p>
+                <label>种族</label>
+                <p>汉族</p>
+                <label>身高</label>
+                <p>180cm</p>
+                <label>体重</label>
+                <p>60kg</p>
+                <label>文胸大小</label>
+                <p>34c</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="bbs-content-display-list">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>术前乳房数值测量</li>
+                            <li>左乳(mm)</li>
+                            <li>右乳(mm)</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>S-N</li>
+                            <li>350</li>
+                            <li>360</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>N-F</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>BW</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>BH</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>T</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>ID</li>
+                            <li class="bbs-content-display-liwidth">350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                </dl>
+            </div>
+            <div class="bbs-content-display-list">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>术后乳房数值测量</li>
+                            <li>左乳(mm)</li>
+                            <li>右乳(mm)</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>S-N</li>
+                            <li>350</li>
+                            <li>360</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>N-F</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>BW</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>BH</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>T</li>
+                            <li>350</li>
+                            <li>350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>ID</li>
+                            <li class="bbs-content-display-liwidth">350</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                </dl>
+            </div>
+            <div class="bbs-content-display-p">
+                消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容消耗10积分查看全部病例内容
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
