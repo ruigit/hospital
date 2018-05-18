@@ -3651,11 +3651,15 @@ body {
 }
 .bbs-content-main-list-l span{
     position: absolute;
-    font-size: 0.45rem;
+    font-size: 0.27rem;
     color: #fff;
     z-index: 55;
-    bottom: 0.55rem;
+    bottom: 0.7rem;
     left: 0.5rem;
+}
+.bbs-div-labl{
+    width: 100%;
+    height: auto;
 }
 .bbs-content-main-list-r{
     width: 70%;
