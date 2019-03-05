@@ -64,14 +64,8 @@
             // 头像剪切上传
             $('#logox').on("click",function(){
                 $(".htmleaf-container").show();
-                $("#clipBtn").click(function(){
-                    if($(".photo-clip-rotateLayer img").attr("src").length!=0){
-                        $("#logox").empty();
-                        $('#logox').append('<img src="' + imgsource + '" >');
-                        $(".htmleaf-container").hide();
-                    }
-                })
             });
+
             $("#clipArea").photoClip({
                 width: 150,
                 height: 150,
@@ -84,9 +78,34 @@
                 },
                 loadComplete: function() {
                     // console.log("照片读取完成");
+                    $("#clipBtn").click(function(){
+                        if($(".photo-clip-rotateLayer img").attr("src").length!=0){
+                            $("#logox").empty();
+                            $('#logox').append('<img src="' + imgsource + '" >');
+                            // 使用ajax则注释下一行
+                            $(".htmleaf-container").hide();
+                        }
+                    });
                 },
                 clipFinish: function(dataURL) {
-                    // console.log(dataURL);
+                     //ajax请求上传图片至服务器
+                     // $.ajax({
+                     //     type: "post",
+                     //     url:  "接口地址",
+                     //     data: "数据dataURL",
+                     //     dataType: 'json',
+                     //     cache: false,
+                     //     processData: false, // 不要去处理发送的数据
+                     //     contentType: false, // 不要去设置Content-Type请求头
+                     //     async: true,    //异步
+                     //     success: function (data) {
+                     //         $(".htmleaf-container").hide();
+                     //         callback(data);
+                     //     },
+                     //     error: function () {
+                     //         alert("请求异常");
+                     //     }
+                     // });
                 }
             });
 
