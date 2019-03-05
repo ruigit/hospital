@@ -3967,6 +3967,86 @@ body {
     border-bottom: 1px #e1e1e1 solid;
 }
 /*change-operation end*/
+/*头像剪切上传 start*/
+.htmleaf-container{
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    display: none;
+    z-index: 9999999;
+}
+#clipArea {
+    height: 92%;
+}
+.foot-use {
+    background: #fff;
+    height: 8%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+.uploader1 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    cursor: default;
+    float: left;
+}
+.blue .button {
+    color: #fff;
+    background: #dd4198;
+    height: 100%;
+    width: 100%;
+    border-right: 1px #fff solid;
+    box-sizing: border-box;
+}
+#file {
+    float: left;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.button {
+    float: left;
+    height: 100%;
+    display: inline-block;
+    outline: 0 none;
+    margin: 0;
+    cursor: pointer;
+    border: 0;
+    width: 30%;
+    font-size: 0.3rem;
+}
+.uploader1 input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 8rem;
+    width: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+#clipBtn {
+    float: right;
+    height: 100%;
+    width: 50%;
+    background: #dd4198;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 0.3rem;
+    z-index: 999;
+}
+/*头像剪切上传 end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

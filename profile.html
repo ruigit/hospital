@@ -20,6 +20,10 @@
     <script type="text/javascript" src="js/rem.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/mobileSelectprofile.min.js"></script>
+    <!--头像剪切上传-->
+    <script type="text/javascript" src="js/hammer.js"></script>
+    <script type="text/javascript" src="js/iscroll-zoom.js"></script>
+    <script type="text/javascript" src="js/jquery.photoClip.js"></script>
     <script>
         //阻止穿透事件
         $(function(){
@@ -33,30 +37,60 @@
             if(winHeight > bodyHeight){
                 $(".profile-content").css({height: winHeight});
             }
-            // 更换头像
-            $('.profile-record-zhi').on("click",function(){
-                var $this = $(this),
-                    btn = $this.find('.profile-cover'),
-                    img = $this.find('.profile-img');
-                btn.on('change',function(){
-                    var file = $(this)[0].files[0],
-                        imgSrc = $(this)[0].value,
-                        imagSize =  $(this)[0].files[0].size,
-                        url = URL.createObjectURL(file);
-                    if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+            // //更换头像
+            // $('.profile-record-zhi').on("click",function(){
+            //     var $this = $(this),
+            //         btn = $this.find('.profile-cover'),
+            //         img = $this.find('.profile-img');
+            //     btn.on('change',function(){
+            //         var file = $(this)[0].files[0],
+            //             imgSrc = $(this)[0].value,
+            //             imagSize =  $(this)[0].files[0].size,
+            //             url = URL.createObjectURL(file);
+            //         if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+            //
+            //             alert("请上传jpg或png格式的图片！");
+            //             return false;
+            //
+            //         }else if(imagSize>1024*1024*3){
+            //                 alert("图片大小应该在3M以内，为："+imagSize/(1024*1024)+"M");
+            //                 return false;
+            //             }
+            //             else {
+            //                 img.attr('src', url);
+            //             }
+            //     });
+            // })
+            // 头像剪切上传
+            $('#logox').on("click",function(){
+                $(".htmleaf-container").show();
+                $("#clipBtn").click(function(){
+                    if($(".photo-clip-rotateLayer img").attr("src").length!=0){
+                        $("#logox").empty();
+                        $('#logox').append('<img src="' + imgsource + '" >');
+                        $(".htmleaf-container").hide();
+                    }
+                })
+            });
+            $("#clipArea").photoClip({
+                width: 150,
+                height: 150,
+                file: "#file",
+                view: "#view",
+                ok: "#clipBtn",
+                outputType: "jpg/png/jpeg",
+                loadStart: function() {
+                    // console.log("照片读取中");
+                },
+                loadComplete: function() {
+                    // console.log("照片读取完成");
+                },
+                clipFinish: function(dataURL) {
+                    // console.log(dataURL);
+                }
+            });
 
-                        alert("请上传jpg或png格式的图片！");
-                        return false;
 
-                    }else if(imagSize>1024*1024*3){
-                            alert("图片大小应该在3M以内，为："+imagSize/(1024*1024)+"M");
-                            return false;
-                        }
-                        else {
-                            img.attr('src', url);
-                        }
-                });
-            })
             // 咨询时间
             var mobileSelect = new MobileSelect({
                 trigger: '#profile-time',
@@ -94,7 +128,8 @@
     </div>
     <div class="profile-list-cont">
             <ul>
-                <li><label>头像：</label><p class="profile-record-zhi"><input class="profile-cover" type="file" name="cover" accept="image/*"/><img class="profile-img" src="img/picd.jpg" /></p><div class="clearfix"></div></li>
+                <!--<li><label>头像：</label><p class="profile-record-zhi"><input class="profile-cover" type="file" name="cover" accept="image/*"/><img class="profile-img" src="img/picd.jpg" /></p><div class="clearfix"></div></li>-->
+                <li><label>头像：</label><p class="profile-record-zhi" id="logox"><img class="profile-img" src="img/picd.jpg" /></p><div class="clearfix"></div></li>
                 <li><label>昵称：</label><input class="profile-jiandang-input" type="text" name="" value="医生昵称" onfocus="if(this.value=='医生昵称'){this.value=''}" onblur="if(this.value==''){this.value='医生昵称'}"><div class="clearfix"></div></li>
                 <li><label>所在院区：</label><input class="profile-jiandang-input" type="text" name="" value="医院名称" onfocus="if(this.value=='医院名称'){this.value=''}" onblur="if(this.value==''){this.value='医院名称'}"><div class="clearfix"></div></li>
                 <li><label>咨询时间：</label><p class="profile-record-zhi" id="profile-time">8:30-11:30 13:30-17:30</p><div class="clearfix"></div></li>
@@ -104,6 +139,17 @@
                 <li><label>医生介绍：</label><textarea class="profile-jiandang-inputt">大学生求职面试自我介绍在11这一过程中非常的重要所以我们要认真对待哦。</textarea><div class="clearfix"></div></li>
                 <div class="clearfix"></div>
             </ul>
+    </div>
+    <div class="htmleaf-container">
+        <div id="clipArea"></div>
+        <div class="foot-use">
+            <div class="uploader1 blue">
+                <input type="button" name="file" class="button" value="打开">
+                <input id="file" type="file"  accept="image/*" multiple  />
+            </div>
+            <button id="clipBtn">截取</button>
+        </div>
+        <div id="view"></div>
     </div>
 
 </div>
