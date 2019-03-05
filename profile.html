@@ -37,7 +37,7 @@
             $('.profile-record-zhi').on("click",function(){
                 var $this = $(this),
                     btn = $this.find('.profile-cover'),
-                    img = $this.find('.profile-cover img');
+                    img = $this.find('.profile-img');
                 btn.on('change',function(){
                     var file = $(this)[0].files[0],
                         imgSrc = $(this)[0].value,
@@ -94,7 +94,7 @@
     </div>
     <div class="profile-list-cont">
             <ul>
-                <li><label>头像：</label><p class="profile-record-zhi"><input class="profile-cover" type="file" name="cover" accept="image/*"/><img src="img/picd.jpg" /></p><div class="clearfix"></div></li>
+                <li><label>头像：</label><p class="profile-record-zhi"><input class="profile-cover" type="file" name="cover" accept="image/*"/><img class="profile-img" src="img/picd.jpg" /></p><div class="clearfix"></div></li>
                 <li><label>昵称：</label><input class="profile-jiandang-input" type="text" name="" value="医生昵称" onfocus="if(this.value=='医生昵称'){this.value=''}" onblur="if(this.value==''){this.value='医生昵称'}"><div class="clearfix"></div></li>
                 <li><label>所在院区：</label><input class="profile-jiandang-input" type="text" name="" value="医院名称" onfocus="if(this.value=='医院名称'){this.value=''}" onblur="if(this.value==''){this.value='医院名称'}"><div class="clearfix"></div></li>
                 <li><label>咨询时间：</label><p class="profile-record-zhi" id="profile-time">8:30-11:30 13:30-17:30</p><div class="clearfix"></div></li>
