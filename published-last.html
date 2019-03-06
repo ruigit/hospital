@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobileSelect.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/mobileSelect.min.js"></script>
+
+    <script>
+        //阻止穿透事件和编辑器起冲突给需要点击的地方加class=needsclick
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".published-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".published-details-content").css({height: winHeight});
+            }
+// 论坛类型
+            $(".published-last-ul li").on("click", function(){
+                $(this).addClass('published-last-color').siblings().removeClass('published-last-color');
+
+            });
+            // 请选择病情类别
+            var mobileSelects = new MobileSelect({
+                trigger: '#operation-l',
+                title: '请选择病情类别',
+                floor:'<ul class="published-ul"><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]}
+                ],
+                position:[3], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#operation-cho-l").empty().append(data[i].value);
+
+                    }
+                }
+            })
+            // 请选择发布案例
+            var mobileSelectq = new MobileSelect({
+                trigger: '#operation-r',
+                title: '请选择发布案例',
+                floor:'<ul class="published-ul"><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]}
+                ],
+                position:[3], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#operation-cho-r").empty().append(data[i].value);
+
+                    }
+                }
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+<div class="published-details-content">
+    <div class="published-details-nav">
+        <i class="iconfont icon-cha published-zuo"></i>
+        <div class="published-details-nav-list">编辑内容</div>
+        <div class="published-fabu">发布</div>
+        <div class="clearfix"></div>
+    </div>
+<div class="published-content">
+    <dl>
+        <dt>
+            <p>论坛标题</p>
+        </dt>
+        <dt>
+            <input class="published-input" type="text" name="" value="请填写发布标题(不超过10字)" onfocus="if(this.value=='请填写发布标题(不超过10字)'){this.value=''}" onblur="if(this.value==''){this.value='请填写发布标题(不超过10字)'}">
+        </dt>
+        <dt>
+            <p>论坛类型</p>
+        </dt>
+        <dt>
+            <ul class="published-last-ul">
+                <li>作品展示</li>
+                <li>病例求助</li>
+                <div class="clearfix"></div>
+            </ul>
+
+        </dt>
+        <dt>
+            <p>案例选择</p>
+        </dt>
+
+        <dt id="operation-l">
+            <span class="published-inputz" id="operation-cho-l">请选择病情类别</span>
+            <i class="iconfont icon-sanjiao published-sanjiao"></i>
+            <div class="clearfix"></div>
+        </dt>
+
+
+        <dt id="operation-r">
+            <span class="published-inputz" id="operation-cho-r">请选择发布案例</span>
+            <i class="iconfont icon-sanjiao published-sanjiao"></i>
+            <div class="clearfix"></div>
+        </dt>
+        <dt>
+            <p>论坛内容</p>
+        </dt>
+    </dl>
+</div>
+    <div class="publish-article-content">
+        <input type="hidden" id="target">
+        <div class="article-content needsclick" id="publishcontent" contenteditable="true" style="user-select: text; overflow-y: auto; outline: none; cursor: text;"><div class="placeholader" style="pointer-events: none;">请编写发布内容</div></div>
+        <div class="footer-btn g-image-upload-box">
+            <div class="upload-button">
+                <span class="upload"><i class="upload-img"></i>插入图片</span>
+                <input class="input-file" id="imageUpload" type="file" name="fileInput" accept="image/*" style="position:absolute;left:0;opacity:0;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+<!--编辑器-->
+<script type="text/javascript" src="js/artEditor.js"></script>
+<script type="text/javascript" src="js/artpe.js"></script>
+</body>
+
+</html>

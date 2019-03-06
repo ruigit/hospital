@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobileSelect.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/mobileSelect.min.js"></script>
+    <!--拟行术式-->
+    <link rel="stylesheet" href="css/mobileSelectpub.css">
+    <script type="text/javascript" src="js/mobileSelectpub.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".tirbune-index-content").height();
+            if(winHeight > bodyHeight){
+                $(".tirbune-index-content").css({height: winHeight});
+            }
+            // 拟行手术
+            var mobileSelect3 = new MobileSelect1({
+                trigger: '#tirbune-nx',
+                title: '选择拟行术式',
+                floor:'<ul class="rec-ul"><li></li><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {
+                                id:'2',
+                                value:'全部',
+                                childs:[
+                                    {id:'1',value:'全部'}
+                                ]
+                            },
+                            {
+                                id:'3',
+                                value:'保乳手术',
+                                childs:[
+                                    {id:'1',value:'传统保乳手术'},
+                                    {id:'2',value:'双环法保乳手术'},
+                                    {id:'3',value:'欧米茄法保乳手术'},
+                                    {id:'4',value:'mckissock保乳手术'},
+                                ]
+                            },
+                            {
+                                id:'4',
+                                value:'部分乳房重建',
+                                childs:[
+                                    {id:'1',value:'部分背阔肌辅助'},
+                                    {id:'2',value:'下腹壁游离脂肪瓣辅助'},
+                                    {id:'3',value:'胸腹壁舌型瓣辅助'},
+                                    {id:'4',value:'不规则假体辅助'},
+                                ]
+                            },
+                            {
+                                id:'5',
+                                value:'全乳房重建',
+                                childs:[
+                                    {id:'1',value:'全背阔肌乳房重建'},
+                                    {id:'2',value:'部分背阔肌乳房重建'},
+                                    {id:'3',value:'游离脂肪瓣乳房重建'},
+                                    {id:'4',value:'tram乳房重建'},
+                                    {id:'5',value:'diep乳房重建'},
+                                    {id:'6',value:'假体乳房重建'}
+                                ]
+                            }
+
+                        ]}
+
+                ],
+
+
+
+                position:[0,0], //初始化定位
+
+
+                callback:function(indexArr, data){
+
+
+                    for (var i=0;i<data.length;i++) {
+
+                        $("#tirbune-nx-l").empty().append(data[i].value.substring(0,2) + '-' + data[++i].value);
+
+                    }
+                }
+            })
+            // function getQueryString(data) {
+            //     var reg = new RegExp("(^|&)" + data + "=([^&]*)(&|$)", "i");
+            //     var r = decodeURI(window.location.search.substr(1)).match(reg); //获取url中"?"符后的字符串并正则匹配
+            //     var context = "";
+            //     if (r != null)
+            //         context = r[2];
+            //     reg = null;
+            //     r = null;
+            //     return context == null || context == "" || context == "undefined" ? "全部拟行术式" : context;
+            // }
+            // $(".tirbune-chose-inputz").on("click", function(){
+            //     window.location="change-operation-tirbune.html";
+            // });
+            // var str = getQueryString("data");
+            //
+            // $(".tirbune-chose-inputz").empty().append(str);
+
+            // 请选择病情类别
+            var mobileSelects = new MobileSelect({
+                trigger: '#tirbune-l',
+                title: '请选择病情类别',
+                floor:'<ul class="published-ul"><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]}
+                ],
+                position:[3], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#tirbune-cho-l").empty().append(data[i].value);
+
+                    }
+                }
+            })
+
+            // 患病乳房
+            $(".tribune-li-nav span").on("click", function(){
+                $(this).addClass('published-last-color').siblings().removeClass('published-last-color');
+
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="tirbune-index-content">
+    <div class="tirbune-index-nav">
+        <div class="tirbune-index-logo">
+            <img src="img/picd.jpg" />
+        </div>
+        <div class="tirbune-index-nav-list">
+            <ul>
+                <li>咨讯</li>
+                <li class="current">论坛</li>
+                <li>专家</li>
+                <li>排行榜</li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <i class="iconfont icon-sousuo index-sousuo"></i>
+        <div class="clearfix"></div>
+    </div>
+<div class="tirbune-chose-lastend">
+<dl>
+    <dt>
+        <ul>
+            <li><p>拟行术式</p></li>
+            <li id="tirbune-nx">
+                <span class="tirbune-chose-inputz" id="tirbune-nx-l">全部拟行术式</span>
+                <i class="iconfont icon-sanjiao tirbune-chose-sanjiao"></i>
+                <div class="clearfix"></div>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </dt>
+    <dt>
+        <ul>
+            <li><p>患者病情</p></li>
+            <li id="tirbune-l">
+                <span class="tirbune-chose-bing" id="tirbune-cho-l">请选择病情类别</span>
+                <i class="iconfont icon-sanjiao tirbune-chose-sanjiao"></i>
+                <div class="clearfix"></div>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </dt>
+    <dt>
+        <ul>
+            <li><p>患病乳房</p></li>
+            <li class="tribune-li-nav">
+                <span>右乳</span>
+                <span>左乳</span>
+                <span>全部</span>
+                <div class="clearfix"></div>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </dt>
+</dl>
+</div>
+<div class="tirbune-content-lastlist">
+    <dl>
+        <dt>
+            <div class="bbs-details-list-content-top tribune-content-i">
+                <img src="img/picd.jpg" />
+                <span>用户#1</span>
+                <p>沈阳盛京医院乳腺科主任</p>
+                <i class="i-one">拟行术式</i>
+                <i class="i-two">右乳-恶性肿瘤</i>
+                <div class="clearfix"></div>
+            </div>
+            <div class="bbs-details-list-content-main tribune-content-p">
+                <span>标题左右乳房相似度71.2%</span>
+                <i>案例分享</i>
+                <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="tribune-content-bottom">
+                <p>2019.3.6 13:15</p>
+                <i class="iconfont icon-chakan tribune-bbs-xinxi"></i><span>111</span>
+                <i class="iconfont icon-xinxi tribune-bbs-xinxi2"></i><span>33</span>
+                <div class="clearfix"></div>
+            </div>
+        </dt>
+        <dt>
+            <div class="bbs-details-list-content-top tribune-content-i">
+                <img src="img/picd.jpg" />
+                <span>用户#1</span>
+                <p>沈阳盛京医院乳腺科主任</p>
+                <i class="i-one">拟行术式</i>
+                <i class="i-two">右乳-恶性肿瘤</i>
+                <div class="clearfix"></div>
+            </div>
+            <div class="bbs-details-list-content-main tribune-content-p">
+                <span>标题左右乳房相似度71.2%</span>
+                <i>案例分享</i>
+                <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="tribune-content-bottom">
+                <p>2019.3.6 13:15</p>
+                <i class="iconfont icon-chakan tribune-bbs-xinxi"></i><span>111</span>
+                <i class="iconfont icon-xinxi tribune-bbs-xinxi2"></i><span>33</span>
+                <div class="clearfix"></div>
+            </div>
+        </dt>
+        <dt>
+            <div class="bbs-details-list-content-top tribune-content-i">
+                <img src="img/picd.jpg" />
+                <span>用户#1</span>
+                <p>沈阳盛京医院乳腺科主任</p>
+                <i class="i-one">拟行术式</i>
+                <i class="i-two">右乳-恶性肿瘤</i>
+                <div class="clearfix"></div>
+            </div>
+            <div class="bbs-details-list-content-main tribune-content-p">
+                <span>标题左右乳房相似度71.2%</span>
+                <i>案例分享</i>
+                <p>关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者关于背阔肌乳房重建手术，首先需要针对患者的实际情况来判断患者</p>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="tribune-content-bottom">
+                <p>2019.3.6 13:15</p>
+                <i class="iconfont icon-chakan tribune-bbs-xinxi"></i><span>111</span>
+                <i class="iconfont icon-xinxi tribune-bbs-xinxi2"></i><span>33</span>
+                <div class="clearfix"></div>
+            </div>
+        </dt>
+    </dl>
+</div>
+
+</div>
+<div class="float-add">
+    <i class="iconfont icon-jiahao tirbune-jiahao"></i>
+</div>
+<div class="footer">
+    <ul>
+        <li><i class="iconfont icon-shouye1-copy shouye curr"></i><p class="currfont">首页</p></li>
+        <li><i class="iconfont icon-tubiao314 jiandang"></i><p>建档</p></li>
+        <li><i class="iconfont icon-geren geren"></i><p>个人</p></li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

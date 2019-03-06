@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-details-content").css({height: winHeight});
+            }
+            // 资质上传
+            var i = 1;
+            var cce;
+            $('.qualification-pic ul li').on("click",function(){
+                clearTimeout(cce);
+                var $this = $(this),
+                    btn = $this.find('.qualification-cover'),
+                    img = $this.find('.qualification-img');
+                btn.on('change',function(){
+                    var file = $(this)[0].files[0],
+                        imgSrc = $(this)[0].value,
+                        imagSize =  $(this)[0].files[0].size,
+                        url = URL.createObjectURL(file);
+                    if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+
+                        alert("请上传jpg或png格式的图片！");
+                        return false;
+
+                    }else if(imagSize>1024*1024*3){
+                        alert("图片大小应该在3M以内，为："+imagSize/(1024*1024)+"M");
+                        return false;
+                    }
+                    else {
+                        $this.find('i').hide();
+                        $this.find('span').hide();
+                        img.attr('src', url);
+                        if (i<5){
+                            cce = setTimeout(function () {
+                                $(".qualification-pic ul li:nth-child("+i+")").show();
+                            }, 1000);
+                            i=i+1;
+                            // console.log(i);
+                        }
+                    }
+                });
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-details-content">
+    <div class="details-nav">
+        <i class="iconfont icon-zuo details-zuo"></i>
+        <div class="details-nav-list">资质认证</div>
+        <div class="clearfix"></div>
+    </div>
+<div class="qualification">
+    <ul>
+        <li class="qualification-color">1 上传证书</li>
+        <li> > </li>
+        <li>2 等待审核</li>
+        <li> > </li>
+        <li>3 认证成功</li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+    <div class="qualification-pic">
+        <p>请确保照片完整且清晰可辩，请避免出现反光</p>
+        <ul>
+            <li>
+                <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+            </li>
+            <li>
+                <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+            </li>
+            <li>
+                <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+            </li>
+            <li>
+                <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <div class="qualification-button">上传证书</div>
+</div>
+</body>
+</html>

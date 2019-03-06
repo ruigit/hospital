@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-content-main-bb-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-content-main-bb-content").css({height: winHeight});
+            }
+            $(".bbs-content-main-bb-content-list dl dt").on("click", function(){
+                // var dat = $(this).parent().find("p").html();
+                var data= $(this).html();
+                var searchUrl = encodeURI("tribune-last.html?data="+data);   //使用encodeURI编码
+                window.location = searchUrl;
+            });
+
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-content-main-bb-content">
+    <div class="bbs-content-main-nav">
+        <i class="iconfont icon-zuo bbs-content-main-zuo"></i>
+        <div class="bbs-content-main-nav-list">选择拟行手术</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bbs-content-main-bb-content-list">
+        <dl>
+            <div class="baoru">
+            <p>保乳手术</p>
+            <dt>传统保乳手术</dt>
+            <dt>双环法保乳手术</dt>
+            <dt>欧米茄法保乳手术</dt>
+            <dt>mckissock保乳手术</dt>
+            </div>
+            <div class="bufen">
+            <p>部分乳房重建</p>
+            <dt>部分背阔肌辅助</dt>
+            <dt>下腹壁游离脂肪瓣辅助</dt>
+            <dt>胸腹壁舌型瓣辅助</dt>
+            <dt>不规则假体辅助</dt>
+            </div>
+            <div class="quanru">
+            <p>全乳房重建</p>
+            <dt>全背阔肌乳房重建</dt>
+            <dt>部分背阔肌乳房重建</dt>
+            <dt>游离脂肪瓣乳房重建</dt>
+            <dt>tram乳房重建</dt>
+            <dt>diep乳房重建</dt>
+            <dt>假体乳房重建</dt>
+            </div>
+        </dl>
+    </div>
+</div>
+
+</body>
+</html>
