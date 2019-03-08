@@ -2860,8 +2860,11 @@ body {
 .published-content dl dt:nth-of-type(5){
     border: none;
 }
-.published-content dl dt:nth-of-type(8){
+.published-content dl dt:nth-of-type(9){
     border: none;
+}
+#operation-r{
+    display: none;
 }
 /*.published-content dl dt:nth-of-type(2){*/
     /*border: none;*/

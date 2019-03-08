@@ -63,8 +63,13 @@
                         $("#operation-cho-l").empty().append(data[i].value);
 
                     }
+                    $('#operation-rl').hide();
+                    $('#operation-r').show();
                 }
-            })
+            });
+            $('#operation-rl').on("click", function(){
+                alert("请先选择病情类别");
+            });
             // 请选择发布案例
             var mobileSelectq = new MobileSelect({
                 trigger: '#operation-r',
@@ -81,7 +86,7 @@
                             {id:'6',value:'主动脉瓣狭窄扩张术'}
                         ]}
                 ],
-                position:[3], //初始化定位
+                position:[0], //初始化定位
 
                 callback:function(indexArr, data){
 
@@ -133,7 +138,11 @@
             <div class="clearfix"></div>
         </dt>
 
-
+        <dt id="operation-rl">
+            <span class="published-inputz">请选择发布案例</span>
+            <i class="iconfont icon-sanjiao published-sanjiao"></i>
+            <div class="clearfix"></div>
+        </dt>
         <dt id="operation-r">
             <span class="published-inputz" id="operation-cho-r">请选择发布案例</span>
             <i class="iconfont icon-sanjiao published-sanjiao"></i>
