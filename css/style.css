@@ -4450,7 +4450,7 @@ body {
 /*}*/
 .qualification-button{
     width: 90%;
-    margin: 0.5rem 5% 0.5rem 5%;
+    margin: 1rem 5% 0.5rem 5%;
     height: 1rem;
     line-height: 1rem;
     background: #dd4198;
@@ -4474,6 +4474,21 @@ body {
 }
 .qualification-pic ul li:not(:first-child) {
     display: none;
+}
+.qualification-input {
+    text-align: center;
+    width: 100%;
+    font-size: 0.3rem;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    padding-top: 0.1rem;
+    overflow: hidden;
 }
 /*qualification end*/
 /*pad-pro横屏*/
