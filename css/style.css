@@ -4450,7 +4450,7 @@ body {
 /*}*/
 .qualification-button{
     width: 90%;
-    margin: 1rem 5% 0.5rem 5%;
+    margin: 0.5rem 5% 0.5rem 5%;
     height: 1rem;
     line-height: 1rem;
     background: #dd4198;
@@ -4477,7 +4477,8 @@ body {
 }
 .qualification-input {
     text-align: center;
-    width: 100%;
+    width: 50%;
+    margin: 0 25%;
     font-size: 0.3rem;
     color: #000;
     background-color: transparent;
