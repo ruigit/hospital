@@ -66,22 +66,22 @@
                     $('#operation-rl').hide();
                     $('#operation-r').show();
                     // 获取后台数据更新发布案例数据
-                    $.ajax({
-                        type: "POST",
-                        url: "xxxx",
-                        data: {},
-                        dataType: "json",
-                        success: function(res){
-                            //这里假设获取到的res.data.area为：
-                            // [
-                            //     {id:'1',value:'附近'},
-                            //     {id:'2',value:'福田区'},
-                            //     {id:'3',value:'罗湖区'},
-                            //     {id:'4',value:'南山区'}
-                            // ]
-                            mobileSelectq.updateWheel(0, res.data.area); //更改第0个轮子
-                        }
-                    });
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "xxxx",
+                    //     data: {},
+                    //     dataType: "json",
+                    //     success: function(res){
+                    //         //这里假设获取到的res.data.area为：
+                    //         // [
+                    //         //     {id:'1',value:'附近'},
+                    //         //     {id:'2',value:'福田区'},
+                    //         //     {id:'3',value:'罗湖区'},
+                    //         //     {id:'4',value:'南山区'}
+                    //         // ]
+                    //         mobileSelectq.updateWheel(0, res.data.area); //更改第0个轮子
+                    //     }
+                    // });
                 }
             });
             $('#operation-rl').on("click", function(){
