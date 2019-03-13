@@ -51,6 +51,8 @@
             // 资质上传
             var i = 1;
             var cce;
+            var arr=new Array();
+            var str;
             $('.qualification-pic ul li').on("click",function(){
                 clearTimeout(cce);
                 var $this = $(this),
@@ -81,10 +83,14 @@
                             i=i+1;
                             // console.log(i);
                         }
-                        console.log(url);
+                        // console.log(url);
                         convertImgToBase64(url, function(base64Img){
+                            // 拼接
+                            arr.push(base64Img);
+                            str=arr.join("");
+                            console.log(str);
                             //转化后的base64
-                            console.log(base64Img);
+                            // console.log(base64Img);
                         });
                     }
                 });
