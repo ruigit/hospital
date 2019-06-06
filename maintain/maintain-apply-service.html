@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>保修管理平台</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobileSelect.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/mobileSelect.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-details-content").css({height: winHeight});
+            }
+            //实现将项目的图片转化成base64
+            function convertImgToBase64(url, callback, outputFormat){
+                var canvas = document.createElement('canvas'),
+                    ctx = canvas.getContext('2d'),
+                    img = new Image;
+                img.crossOrigin = 'Anonymous';
+                img.onload = function(){
+                    canvas.height = img.height;
+                    canvas.width = img.width;
+                    ctx.drawImage(img,0,0);
+                    var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+                    callback.call(this, dataURL);
+                    canvas = null;
+                };
+                img.src = url;
+            }
+
+            // 图片上传
+            var i = 1;
+            var cce;
+            var arr=new Array();
+            var str;
+            $('.maintain-pic ul li').on("click",function(){
+                clearTimeout(cce);
+                var $this = $(this),
+                    btn = $this.find('.qualification-cover'),
+                    img = $this.find('.qualification-img');
+                btn.on('change',function(){
+                    var file = $(this)[0].files[0],
+                        imgSrc = $(this)[0].value,
+                        imagSize =  $(this)[0].files[0].size,
+                        url = URL.createObjectURL(file);
+                    if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)){
+
+                        alert("请上传jpg或png格式的图片！");
+                        return false;
+
+                    }else if(imagSize>1024*1024*3){
+                        alert("图片大小应该在3M以内，为："+imagSize/(1024*1024)+"M");
+                        return false;
+                    }
+                    else {
+                        $this.find('i').hide();
+                        $this.find('span').hide();
+                        img.attr('src', url);
+                        if (i<5){
+                            cce = setTimeout(function () {
+                                $(".maintain-pic ul li:nth-child("+i+")").show();
+                            }, 1000);
+                            i=i+1;
+                            // console.log(i);
+                        }
+                        // console.log(url);
+                        convertImgToBase64(url, function(base64Img){
+                            // 拼接
+                            arr.push(base64Img);
+                            str=arr.join("");
+                            console.log(str);
+                            //转化后的base64
+                            // console.log(base64Img);
+                        });
+                    }
+                });
+            })
+            // 请选择问题设备
+            var mobileSelects = new MobileSelect({
+                trigger: '#operation-l',
+                title: '请选择问题设备',
+                floor:'<ul class="published-ul"><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]}
+                ],
+                position:[3], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#operation-cho-l").empty().append(data[i].value);
+
+                    }
+
+                    // 获取后台数据更新发布案例数据
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "xxxx",
+                    //     data: {},
+                    //     dataType: "json",
+                    //     success: function(res){
+                    //         //这里假设获取到的res.data.area为：
+                    //         // [
+                    //         //     {id:'1',value:'附近'},
+                    //         //     {id:'2',value:'福田区'},
+                    //         //     {id:'3',value:'罗湖区'},
+                    //         //     {id:'4',value:'南山区'}
+                    //         // ]
+                    //         mobileSelectq.updateWheel(0, res.data.area); //更改第0个轮子
+                    //     }
+                    // });
+                }
+            });
+            // 请选择问题内容
+            var mobileSelect1 = new MobileSelect({
+                trigger: '#operation-r',
+                title: '请选择问题内容',
+                floor:'<ul class="published-ul"><li></li></ul>',
+                triggerDisplayData: false,
+                wheels:[
+                    {data:[
+                            {id:'1',value:'正常'},
+                            {id:'2',value:'胃十二指肠吻合术'},
+                            {id:'3',value:'低位食管静脉结扎'},
+                            {id:'4',value:'门腔静脉吻合术'},
+                            {id:'5',value:'甲状腺叶切除术'},
+                            {id:'6',value:'主动脉瓣狭窄扩张术'}
+                        ]}
+                ],
+                position:[3], //初始化定位
+
+                callback:function(indexArr, data){
+
+                    for (var i=0;i<data.length;i++) {
+                        $("#operation-cho-r").empty().append(data[i].value);
+
+                    }
+
+                    // 获取后台数据更新发布案例数据
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "xxxx",
+                    //     data: {},
+                    //     dataType: "json",
+                    //     success: function(res){
+                    //         //这里假设获取到的res.data.area为：
+                    //         // [
+                    //         //     {id:'1',value:'附近'},
+                    //         //     {id:'2',value:'福田区'},
+                    //         //     {id:'3',value:'罗湖区'},
+                    //         //     {id:'4',value:'南山区'}
+                    //         // ]
+                    //         mobileSelectq.updateWheel(0, res.data.area); //更改第0个轮子
+                    //     }
+                    // });
+                }
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-details-content">
+    <div class="details-nav">
+        <div class="details-nav-list">保修管理平台</div>
+        <div class="clearfix"></div>
+    </div>
+<div class="maintain-apply-list">
+    <div class="maintain-apply-list-title">保修申请报表</div>
+    <div class="maintain-apply-list-main">
+        <dl>
+            <dt id="operation-l"><label><i>*</i>问题设备</label><span class="published-sanjiao">></span><span class="published-inputz" id="operation-cho-l">请选择</span><div class="clearfix"></div></dt>
+            <dt id="operation-r"><label><i>*</i>问题内容</label><span class="published-sanjiao">></span><span class="published-inputz" id="operation-cho-r">请选择</span><div class="clearfix"></div></dt>
+            <dt style="height: auto;">
+                <label><i>*</i>解决方法</label><div class="clearfix"></div>
+                <textarea class="maintain-apply-describe" onfocus="if(value=='请输入维修详情描述'){value=''}" onblur="if (value ==''){value='请输入维修详情描述'}">请输入维修详情描述</textarea>
+            </dt>
+            <dt style="height: auto;border: none;">
+                <label style="text-indent: 0.2rem;">图片</label><div class="clearfix"></div>
+                <div class="maintain-pic">
+                    <ul>
+                        <li>
+                            <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                            <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+                        </li>
+                        <li>
+                            <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                            <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+                        </li>
+                        <li>
+                            <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                            <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+                        </li>
+                        <li>
+                            <input class="qualification-cover" type="file" name="cover" accept="image/*"/>
+                            <img class="qualification-img" src="img/qualification.png" onerror="this.style.display='none'"/>
+                        </li>
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+    <div class="qualification-button">提交</div>
+</div>
+</body>
+</html>

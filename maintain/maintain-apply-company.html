@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <link href="../favicon.ico" rel="shortcut icon">
+    <title>hospital</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function(){
+            new
+            FastClick(document.body);
+        })
+        $(document).ready(function() {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyHeight = $(".bbs-details-content").height();
+            if(winHeight > bodyHeight){
+                $(".bbs-details-content").css({height: winHeight});
+            }
+
+        })
+
+    </script>
+</head>
+<body>
+<div class="bbs-details-content">
+    <div class="details-nav">
+        <div class="details-nav-list">保修管理平台</div>
+        <div class="clearfix"></div>
+    </div>
+<div class="maintain-apply-list">
+    <div class="maintain-apply-list-title">编辑公司信息</div>
+    <div class="maintain-apply-list-main">
+        <dl>
+            <dt><label><i>*</i>使用单位</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
+            <dt><label><i>*</i>设备型号</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
+            <dt><label><i>*</i>设备名称</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
+            <dt style="height: auto;border: none;">
+                <label style="text-indent: 0.2rem;">详情</label><div class="clearfix"></div>
+                <textarea class="maintain-apply-describe" onfocus="if(value=='请输入相关描述'){value=''}" onblur="if (value ==''){value='请输入相关描述'}">请输入相关描述</textarea>
+            </dt>
+
+        </dl>
+    </div>
+</div>
+
+    <div class="qualification-button qualification-button-magin">提交</div>
+</div>
+</body>
+</html>
