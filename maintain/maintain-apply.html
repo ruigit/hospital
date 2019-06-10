@@ -141,6 +141,48 @@
                     // });
                 }
             });
+            // 描述高度自适应
+            function makeExpandingArea(el) {
+                var timer = null;
+                //由于ie8有溢出堆栈问题，故调整了这里
+                var setStyle = function(el, auto) {
+                    if (auto) el.style.height = 'auto';
+                    el.style.height = el.scrollHeight + 'px';
+                }
+                var delayedResize = function(el) {
+                    if (timer) {
+                        clearTimeout(timer);
+                        timer = null;
+                    }
+                    timer = setTimeout(function() {
+                        setStyle(el)
+                    }, 200);
+                }
+                if (el.addEventListener) {
+                    el.addEventListener('input', function() {
+                        setStyle(el, 1);
+                    }, false);
+                    setStyle(el)
+                } else if (el.attachEvent) {
+                    el.attachEvent('onpropertychange', function() {
+                        setStyle(el)
+                    })
+                    setStyle(el)
+                }
+                if (window.VBArray && window.addEventListener) { //IE9
+                    el.attachEvent("onkeydown", function() {
+                        var key = window.event.keyCode;
+                        if (key == 8 || key == 46) delayedResize(el);
+
+                    });
+                    el.attachEvent("oncut", function() {
+                        delayedResize(el);
+                    }); //处理粘贴
+                }
+            }
+
+            var textarea = document.getElementById('textarea');
+            makeExpandingArea(textarea);
         })
 
     </script>
@@ -160,7 +202,7 @@
             <dt id="operation-l"><label><i>*</i>故障分类</label><span class="published-sanjiao">></span><span class="published-inputz" id="operation-cho-l">请选择</span><div class="clearfix"></div></dt>
             <dt style="height: auto;">
                 <label style="text-indent: 0.2rem;">详情描述</label><div class="clearfix"></div>
-                <textarea class="maintain-apply-describe" onfocus="if(value=='请输入故障详情描述'){value=''}" onblur="if (value ==''){value='请输入故障详情描述'}">请输入故障详情描述</textarea>
+                <textarea id="textarea" class="maintain-apply-describe" onfocus="if(value=='请输入故障详情描述'){value=''}" onblur="if (value ==''){value='请输入故障详情描述'}">请输入故障详情描述</textarea>
             </dt>
             <dt style="height: auto;border: none;">
                 <label style="text-indent: 0.2rem;">图片</label><div class="clearfix"></div>
