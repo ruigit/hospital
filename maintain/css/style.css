@@ -261,11 +261,11 @@ body {
     font-size: 0.35rem;
 }
 .saoyisao {
-    position: fixed;
-    right: 0.5rem;
-    bottom: 1rem;
-    font-size: 0.9rem;
-    color: #1d90fb;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.15rem;
+    font-size: 0.7rem;
+    color: #9b9b9b;
     z-index: 88;
 }
 /*列表end*/
