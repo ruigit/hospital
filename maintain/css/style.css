@@ -36,6 +36,7 @@ body {
     width: 100%;
     height: auto;
     background: #f8f8f8;
+    padding-bottom: 0.5rem;
 }
 .details-nav {
     width: 100%;

@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/rem.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="laydate/laydate.js"></script>
     <script>
         //阻止穿透事件
         $(function(){
@@ -74,8 +75,11 @@
 
             var textarea = document.getElementById('textarea');
             makeExpandingArea(textarea);
-
-        })
+            laydate.render({
+                elem: '#test1' //指定元素
+                ,showBottom: false
+            });
+        });
 
     </script>
 </head>
@@ -92,11 +96,11 @@
             <dt><label><i>*</i>使用单位</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
             <dt><label><i>*</i>设备型号</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
             <dt><label><i>*</i>设备名称</label><input class="profile-jiandang-input" type="text" name="" value="请输入" onfocus="if(this.value=='请输入'){this.value=''}" onblur="if(this.value==''){this.value='请输入'}"><div class="clearfix"></div></dt>
+            <dt><label><i>*</i>时间</label><input id="test1" class="profile-jiandang-input" value="请选择" onfocus="if(this.value=='请选择'){this.value=''}" onblur="if(this.value==''){this.value='请选择'}"><div class="clearfix"></div></dt>
             <dt style="height: auto;border: none;">
                 <label style="text-indent: 0.2rem;">详情</label><div class="clearfix"></div>
                 <textarea id="textarea" class="maintain-apply-describe" onfocus="if(value=='请输入相关描述'){value=''}" onblur="if (value ==''){value='请输入相关描述'}">请输入相关描述</textarea>
             </dt>
-
         </dl>
     </div>
 </div>
