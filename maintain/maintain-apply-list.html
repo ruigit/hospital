@@ -32,8 +32,89 @@
                 $(".bbs-details-content").css({height: winHeight});
             }
 
-        })
+            // 判断ios或安卓
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            // 图片预览
+            $.fn.ImgZoomIn = function () {
+                var window_h = $(window).height();
+                var scroll_h = $(window).scrollTop();
+                bgstr = '<div id="ImgZoomInBG" style="position: absolute;filter:Alpha(Opacity=70); opacity:0.7;z-index: 10000;top:0;bottom: 0;left: 0;right:0;background-color: #000;display: none;"></div>';
+                imgstr = '<img id="ImgZoomInImage" src="' + $(this).attr('src')+'" style="cursor:pointer; display:none;position:absolute; z-index:10001;" />';
+                if ($('#ImgZoomInBG').length < 1) {
+                    $('body').append(bgstr);
+                }
+                if ($('#ImgZoomInImage').length < 1) {
+                    $('body').append(imgstr);
+                }
+                else {
+                    $('#ImgZoomInImage').attr('src', $(this).attr('src'));
+                }
+                $('#ImgZoomInBG').css('top', scroll_h+'px');
+                $('#ImgZoomInBG').css('width', '100%');
+                $('#ImgZoomInBG').css('height', window_h+'px');
 
+                $('#ImgZoomInImage').css('width', '100%');
+                $('#ImgZoomInImage').css('height', (window_h/2)+'px');
+                $('#ImgZoomInImage').css('top', (scroll_h+window_h/4)+'px');
+
+                $('#ImgZoomInBG').show();
+                $('#ImgZoomInImage').show();
+
+                if (isIOS) {
+                    // 防止第一次滚动
+                    document.ontouchmove=function(){
+                        return false;
+                    };
+                }
+            };
+
+            $(document).on('click','.pic',function (t){
+                $(this).ImgZoomIn();
+                if (isAndroid) {
+                    document.body.addEventListener('touchmove', function (e) {
+                        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                    }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+                }
+                if (isIOS) {
+                    $('html,body').css('overflow', 'hidden');
+                    $('html,body').css('height', '100%');
+                    $('.bbs-details-content').css('padding-bottom', '0');
+                    document.ontouchmove=function(){
+                        return false;
+                    };
+                    t.preventDefault();
+                }else {
+                    $('html,body').css('overflow', 'hidden');
+                    $('html,body').css('height', '100%');
+                    $('.bbs-details-content').css('padding-bottom', '0');
+                }
+            });
+            $(document).on('click','#ImgZoomInBG,#ImgZoomInImage',function(t){
+                $('#ImgZoomInImage').hide();
+                $('#ImgZoomInBG').hide();
+                if (isAndroid) {
+                    document.body.addEventListener('touchmove', function () {
+                        window.event.returnValue = true
+                    });
+                }
+                if (isIOS) {
+                    $('html,body').css('overflow', 'auto');
+                    $('html,body').css('height', 'auto');
+                    $('.bbs-details-content').css('padding-bottom', '1rem');
+                    document.ontouchmove=function(){
+                        return true;
+                    };
+                    t.preventDefault();
+                }else {
+                    $('html,body').css('overflow', 'auto');
+                    $('html,body').css('height', 'auto');
+                    $('.bbs-details-content').css('padding-bottom', '1rem');
+                }
+            });
+
+        })
     </script>
 </head>
 <body>
@@ -49,7 +130,7 @@
         <dt>
             <ul>
                 <li>
-                    <p>报修公司：沈阳欣欣晶智计算机安全检测有限公司</p><span>查看详情 ></span><div class="clearfix"></div>
+                    <p>报修公司：沈阳欣欣晶智计算机安全检测有限公司</p>
                 </li>
                 <li>
                     <p>设备名称：设备名称</p>
@@ -60,68 +141,22 @@
                 <li>
                     <p>故障类型：故障类型</p>
                 </li>
-                <li style="border-top: 1px #cccccc solid;padding: 0.2rem 0;">
-                    <p><i class="iconfont icon-shizhong shizhong"></i>06月06日  10:34</p><span class="list-butt">接单</span><div class="clearfix"></div>
+                <li style="overflow:auto;height: auto;">
+                    <p style="height: auto;">故障类型：故障故障类型故障类型故障类型故障类型故障类型类型</p>
                 </li>
-            </ul>
-        </dt>
-        <dt>
-            <ul>
-                <li>
-                    <p>报修公司：沈阳欣欣晶智计算机安全检测有限公司</p><span>查看详情 ></span><div class="clearfix"></div>
-                </li>
-                <li>
-                    <p>设备名称：设备名称</p>
-                </li>
-                <li>
-                    <p>设备型号：设备型号</p>
-                </li>
-                <li>
-                    <p>故障类型：故障类型</p>
+                <li style="height: auto;">
+                    <img class="pic" src="img/picd.jpg">
+                    <img class="pic" src="img/scal01.png">
+                    <img class="pic" src="img/scal02.png">
+                    <img class="pic" src="img/scal03.png">
+                    <div class="clearfix"></div>
                 </li>
                 <li style="border-top: 1px #cccccc solid;padding: 0.2rem 0;">
                     <p><i class="iconfont icon-shizhong shizhong"></i>06月06日  10:34</p><span class="list-butt">接单</span><div class="clearfix"></div>
                 </li>
             </ul>
         </dt>
-        <dt>
-            <ul>
-                <li>
-                    <p>报修公司：沈阳欣欣晶智计算机安全检测有限公司</p><span>查看详情 ></span><div class="clearfix"></div>
-                </li>
-                <li>
-                    <p>设备名称：设备名称</p>
-                </li>
-                <li>
-                    <p>设备型号：设备型号</p>
-                </li>
-                <li>
-                    <p>故障类型：故障类型</p>
-                </li>
-                <li style="border-top: 1px #cccccc solid;padding: 0.2rem 0;">
-                    <p><i class="iconfont icon-shizhong shizhong"></i>06月06日  10:34</p><span class="list-butt">接单</span><div class="clearfix"></div>
-                </li>
-            </ul>
-        </dt>
-        <dt>
-            <ul>
-                <li>
-                    <p>报修公司：沈阳欣欣晶智计算机安全检测有限公司</p><span>查看详情 ></span><div class="clearfix"></div>
-                </li>
-                <li>
-                    <p>设备名称：设备名称</p>
-                </li>
-                <li>
-                    <p>设备型号：设备型号</p>
-                </li>
-                <li>
-                    <p>故障类型：故障类型</p>
-                </li>
-                <li style="border-top: 1px #cccccc solid;padding: 0.2rem 0;">
-                    <p><i class="iconfont icon-shizhong shizhong"></i>06月06日  10:34</p><span class="list-butt">接单</span><div class="clearfix"></div>
-                </li>
-            </ul>
-        </dt>
+
     </dl>
 </div>
 

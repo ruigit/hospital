@@ -127,3 +127,4 @@ select:-webkit-autofill {
 input[type=text]:focus, input[type=password]:focus, textarea:focus {
     -webkit-box-shadow: 0 0 0 1000px transparent inset!important;
 }
+* { touch-action: pan-y; }

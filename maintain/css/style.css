@@ -229,13 +229,23 @@ body {
     margin: 0.2rem auto 0 auto;
 }
 .maintain-apply-list-main-l dt ul li p{
-    width: 80%;
+    width: 100%;
     color: #000;
     font-size: 0.26rem;
     line-height: 0.4rem;
     height: 0.4rem;
     overflow: hidden;
     float: left;
+}
+.maintain-apply-list-main-l dt ul li:last-of-type p{
+    width: 80%;
+}
+.maintain-apply-list-main-l dt ul li img{
+    float: left;
+    width: 20%;
+    margin-left: 4%;
+    height: auto;
+    border: none;
 }
 .maintain-apply-list-main-l dt ul li span{
     width: 20%;
