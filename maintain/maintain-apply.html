@@ -34,26 +34,26 @@
                 $(".bbs-details-content").css({height: winHeight});
             }
             //实现将项目的图片转化成base64
-            function convertImgToBase64(url, callback, outputFormat){
-                var canvas = document.createElement('canvas'),
-                    ctx = canvas.getContext('2d'),
-                    img = new Image;
-                img.crossOrigin = 'Anonymous';
-                img.onload = function(){
-                    canvas.height = img.height;
-                    canvas.width = img.width;
-                    ctx.drawImage(img,0,0);
-                    var dataURL = canvas.toDataURL(outputFormat || 'image/png');
-                    callback.call(this, dataURL);
-                    canvas = null;
-                };
-                img.src = url;
-            }
+            // function convertImgToBase64(url, callback, outputFormat){
+            //     var canvas = document.createElement('canvas'),
+            //         ctx = canvas.getContext('2d'),
+            //         img = new Image;
+            //     img.crossOrigin = 'Anonymous';
+            //     img.onload = function(){
+            //         canvas.height = img.height;
+            //         canvas.width = img.width;
+            //         ctx.drawImage(img,0,0);
+            //         var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+            //         callback.call(this, dataURL);
+            //         canvas = null;
+            //     };
+            //     img.src = url;
+            // }
 
-            // 图片上传
+            // 图片压缩上传
             var i = 1;
             var cce;
-            var arr=new Array();
+            var arr = new Array();
             var str;
             $('.maintain-pic ul li').on("click",function(){
                 clearTimeout(cce);
@@ -86,14 +86,41 @@
                             // console.log(i);
                         }
                         // console.log(url);
-                        convertImgToBase64(url, function(base64Img){
-                            // 拼接
-                            arr.push(base64Img);
-                            str=arr.join("");
-                            console.log(str);
-                            //转化后的base64
-                            // console.log(base64Img);
-                        });
+                        // convertImgToBase64(url, function(base64Img){
+                        //     // 拼接
+                        //     arr.push(base64Img);
+                        //     str=arr.join("");
+                        //     console.log(str);
+                        //     //转化后的base64
+                        //     // console.log(base64Img);
+                        // });
+                        // 对图片进行压缩
+                            var reader = new FileReader();
+                            reader.readAsDataURL(file);
+                            reader.onload = function(e) {
+                                var image = new Image();//新建一个img标签（还没嵌入DOM节点)
+                                image.src = e.target.result;
+                                image.onload = function() {
+                                    var canvas = document.createElement('canvas'),
+                                        context = canvas.getContext('2d'),
+                                        imageWidth = image.width / 2,    //压缩后图片的大小
+                                        imageHeight = image.height / 2,
+                                        data = '';
+
+                                    canvas.width = imageWidth;
+                                    canvas.height = imageHeight;
+
+                                    context.drawImage(image, 0, 0, imageWidth, imageHeight);
+                                    data = canvas.toDataURL('image/png');
+
+                                    //压缩完成
+                                    img.attr('src', data);
+                                    arr.push(data);
+                                    str=arr.join("");
+                                    console.log(str);
+                                }
+                            };
+
                     }
                 });
             })
