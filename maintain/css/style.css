@@ -243,8 +243,9 @@ body {
 .maintain-apply-list-main-l dt ul li img{
     float: left;
     width: 20%;
+    height: 1.38rem;
     margin-left: 4%;
-    height: auto;
+    /*height: auto;*/
     border: none;
 }
 .maintain-apply-list-main-l dt ul li span{
