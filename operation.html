@@ -196,7 +196,7 @@
 
                 callback:function(indexArr, data){
 
-
+                    console.log(indexArr)
                     for (var i=0;i<data.length;i++) {
 
                         $("#column-r").empty().append('右乳' + '-'  + data[i].value + '-' + data[++i].value);
@@ -204,6 +204,12 @@
                     }
                 }
             })
+            // 初始化改变页面初始值
+            // var i =2;
+            // var k =3;
+            // mobileSelect2.locatePosition(0,i);
+            // mobileSelect2.locatePosition(1,k);
+            // $("#column-r").empty().append('右乳' + '-'  + data[i].value + '-' + data[++i].value);
         })
     </script>
 </head>
